@@ -716,8 +716,10 @@ if ($_SERVER['HTTP_HOST'] === 'stream-deck-button-designer.addy.codes') {
 						Export Size
 					</label>
 					<select id="exportSizeControl" default-choices>
-						<option value="144" selected>144×144px</option>
+						<option value="144" selected>144×144px (Stream Deck)</option>
 						<option value="288">288×288px (HD)</option>
+						<option value="200x100">200×100px</option>
+						<option value="800x100">800×100px</option>
 					</select>
 				</div>
 				<button id="download" class="btn-primary">
