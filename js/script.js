@@ -2840,7 +2840,13 @@ function updateFontPreviews() {
 // Get selected export size
 function getExportSize() {
 	const exportSizeControl = document.getElementById('exportSizeControl');
-	return parseInt(exportSizeControl?.value || '144', 10);
+	const val = exportSizeControl?.value || '144';
+	if (val.includes('x')) {
+		const parts = val.split('x');
+		return { width: parseInt(parts[0], 10), height: parseInt(parts[1], 10) };
+	}
+	const size = parseInt(val, 10);
+	return { width: size, height: size };
 }
 
 // Download functionality - dynamic export size (144px default, 288px HD option)
@@ -2873,19 +2879,42 @@ document.getElementById("download").addEventListener("click", async function() {
 	// Use pixelRatio to scale up to selected size (size/244)
 	const pixelRatio = exportSize / 244;
 	
+	const exportSize = getExportSize();
+
+	// ...bestaande code voor activeGif check...
+	
+	const pixelRatioX = exportSize.width / 244;
+	const pixelRatioY = exportSize.height / 244;
+
 	try {
-		const dataUrl = await htmlToImage.toPng(previewButton, {
-			quality: 1,
-			pixelRatio: pixelRatio
-		});
-		
-		const link = document.createElement('a');
-		link.download = `${filename}.png`;
-		link.href = dataUrl;
-		link.click();
+	    // Voor niet-vierkante formaten: tijdelijk preview schalen
+	    const previewEl = document.getElementById('preview-button');
+	    const originalWidth = previewEl.style.width;
+	    const originalHeight = previewEl.style.height;
+	
+	    if (exportSize.width !== exportSize.height) {
+	        previewEl.style.width = exportSize.width + 'px';
+	        previewEl.style.height = exportSize.height + 'px';
+	    }
+	
+	    const dataUrl = await htmlToImage.toPng(previewEl, {
+	        quality: 1,
+	        width: exportSize.width,
+	        height: exportSize.height,
+	        pixelRatio: 1
+	    });
+	
+	    // Herstel originele afmetingen
+	    previewEl.style.width = originalWidth;
+	    previewEl.style.height = originalHeight;
+	
+	    const link = document.createElement('a');
+	    link.download = `${filename}.png`;
+	    link.href = dataUrl;
+	    link.click();
 	} catch(error) {
-		console.error('Export error:', error);
-		alert('There was an error exporting the button. Please try again.');
+	    console.error('Export error:', error);
+	    alert('Er was een fout bij het exporteren. Probeer opnieuw.');
 	}
 });
 
