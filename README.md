@@ -1,4 +1,4 @@
-# button-designer
+# button-plus-designer
 
 Unofficial, community-made button/icon designer for Stream Deck-compatible keys.
 
