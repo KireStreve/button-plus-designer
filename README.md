@@ -8,6 +8,9 @@ Unofficial, community-made button/icon designer for Stream Deck-compatible keys.
 ## Why this fork?
 This is a fork from https://github.com/adamgreenough/button-designer i love this application. But because i have a Stream Deck Plus and this Stream deck has a touch strip where you can change the background. I what his design because it so beautiful.
 
+> [!IMPORTANT]
+> This fork don't work at the moment
+
 > [!WARNING]
 > I am not a specialist in coding, which is why I took the repo as a fork and used Claude AI to make adjustments that I wanted to include.
 
