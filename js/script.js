@@ -690,638 +690,27 @@ let iconGif = { hasAnimated: false, data: null, file: null };
 // TEMPLATES FEATURE
 // ========================================
 
-// Default starter templates with attractive designs
 const defaultTemplates = [
-	{
-		id: 'default-live',
-		name: 'Live Stream',
-		settings: {
-			textText: 'Go Live',
-			textSize: '56px',
-			textColour: '#ffffff',
-			textFont: 'Bebas Neue',
-			textTracking: '3',
-			textLineHeight: '0.9',
-			textWeight: '400',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#ef4444',
-			backgroundColour1: '#dc2626',
-			backgroundColour2: '#7f1d1d',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'gloss-over.png',
-			iconType: 'md',
-			iconMd: 'sensors',
-			iconSize: '110px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-mute',
-		name: 'Mute Mic',
-		settings: {
-			textText: 'MUTE',
-			textSize: '24px',
-			textColour: '#ffffff',
-			textFont: 'Inter',
-			textTracking: '3',
-			textLineHeight: '0.9',
-			textWeight: '600',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'solid',
-			backgroundColour: '#1e293b',
-			backgroundColour1: '#1e293b',
-			backgroundColour2: '#0f172a',
-			backgroundGradient: 'vertical',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '6px',
-			borderColour: '#ef4444',
-			borderRadius: '15%',
-			overlay: 'none.png',
-			iconType: 'md',
-			iconMd: 'mic_off',
-			iconSize: '110px',
-			iconPosition: 'inline',
-			iconColour: '#ef4444',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-gaming',
-		name: 'Game Mode',
-		settings: {
-			textText: 'GAME',
-			textSize: '44px',
-			textColour: '#00ff88',
-			textFont: 'Press Start 2P',
-			textTracking: '0',
-			textLineHeight: '1.1',
-			textWeight: '400',
-			textTransform: 'uppercase',
-			textShadow: 'glow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#0f0f23',
-			backgroundColour1: '#0f0f23',
-			backgroundColour2: '#1a1a3e',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '6px',
-			borderColour: '#00ff88',
-			borderRadius: '15%',
-			overlay: 'scanlines.png',
-			iconType: 'md',
-			iconMd: 'sports_esports',
-			iconSize: '110px',
-			iconPosition: 'inline',
-			iconColour: '#00ff88',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'glow',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-scene',
-		name: 'Scene Switch',
-		settings: {
-			textText: 'Scene 1',
-			textSize: '24px',
-			textColour: '#ffffff',
-			textFont: 'Poppins',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '600',
-			textTransform: 'none',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#6366f1',
-			backgroundColour1: '#6366f1',
-			backgroundColour2: '#4338ca',
-			backgroundGradient: 'diagonal',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'jelly.png',
-			iconType: 'md',
-			iconMd: 'dashboard',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '0.9',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-music',
-		name: 'Play Music',
-		settings: {
-			textText: '',
-			textSize: '32px',
-			textColour: '#ffffff',
-			textFont: 'Hubot Sans',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'none',
-			textShadow: 'none',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#1db954',
-			backgroundColour1: '#1db954',
-			backgroundColour2: '#14833b',
-			backgroundGradient: 'vertical',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '50%',
-			overlay: 'gloss-diagonal.png',
-			iconType: 'md',
-			iconMd: 'play_arrow',
-			iconSize: '140px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-discord',
-		name: 'Discord',
-		settings: {
-			textText: 'Discord',
-			textSize: '28px',
-			textColour: '#ffffff',
-			textFont: 'Nunito',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'none',
-			textShadow: 'shadow',
-			backgroundStyle: 'solid',
-			backgroundColour: '#5865f2',
-			backgroundColour1: '#5865f2',
-			backgroundColour2: '#4752c4',
-			backgroundGradient: 'vertical',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'none.png',
-			iconType: 'md',
-			iconMd: 'headset_mic',
-			iconSize: '180px',
-			iconPosition: 'behind',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '0.2',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'green',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-brb',
-		name: 'Be Right Back',
-		settings: {
-			textText: 'BRB',
-			textSize: '56px',
-			textColour: '#fbbf24',
-			textFont: 'Permanent Marker',
-			textTracking: '2',
-			textLineHeight: '0.9',
-			textWeight: '400',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#1e1b4b',
-			backgroundColour1: '#312e81',
-			backgroundColour2: '#0f0a1e',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#fbbf24',
-			borderRadius: '15%',
-			overlay: 'vignette.png',
-			iconType: 'md',
-			iconMd: 'schedule',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#fbbf24',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '0.8',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'orange',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-recording',
-		name: 'Recording',
-		settings: {
-			textText: 'REC',
-			textSize: '32px',
-			textColour: '#ffffff',
-			textFont: 'JetBrains Mono',
-			textTracking: '3',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'uppercase',
-			textShadow: 'glow',
-			backgroundStyle: 'solid',
-			backgroundColour: '#18181b',
-			backgroundColour1: '#18181b',
-			backgroundColour2: '#09090b',
-			backgroundGradient: 'vertical',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '3px',
-			borderColour: '#ef4444',
-			borderRadius: '15%',
-			overlay: 'inner-shadow.png',
-			iconType: 'md',
-			iconMd: 'radio_button_checked',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#ef4444',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'glow',
-			badge: 'red',
-			badgePosition: 'top-left'
-		}
-	},
-	{
-		id: 'default-soundfx',
-		name: 'Sound Effect',
-		settings: {
-			textText: 'Air Horn',
-			textSize: '32px',
-			textColour: '#ffffff',
-			textFont: 'Quicksand',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'none',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#f97316',
-			backgroundColour1: '#fb923c',
-			backgroundColour2: '#c2410c',
-			backgroundGradient: 'diagonal',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'jelly.png',
-			iconType: 'char',
-			iconMd: 'volume_up',
-			iconSize: '110px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '📯',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-focus',
-		name: 'Focus Mode',
-		settings: {
-			textText: 'FOCUS',
-			textSize: '56px',
-			textColour: '#ffffff',
-			textFont: 'Bebas Neue',
-			textTracking: '4',
-			textLineHeight: '0.9',
-			textWeight: '400',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#0ea5e9',
-			backgroundColour1: '#0284c7',
-			backgroundColour2: '#0c4a6e',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'none.png',
-			iconType: 'md',
-			iconMd: 'do_not_disturb_on',
-			iconSize: '180px',
-			iconPosition: 'behind',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '0.15',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-screenshot',
-		name: 'Screenshot',
-		settings: {
-			textText: '',
-			textSize: '32px',
-			textColour: '#ffffff',
-			textFont: 'Inter',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '600',
-			textTransform: 'none',
-			textShadow: 'none',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#8b5cf6',
-			backgroundColour1: '#a78bfa',
-			backgroundColour2: '#5b21b6',
-			backgroundGradient: 'diagonal',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '6px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'corner-glow.png',
-			iconType: 'md',
-			iconMd: 'screenshot',
-			iconSize: '110px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-clip',
-		name: 'Clip That',
-		settings: {
-			textText: 'CLIP',
-			textSize: '28px',
-			textColour: '#ffffff',
-			textFont: 'Oswald',
-			textTracking: '2',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#ec4899',
-			backgroundColour1: '#f472b6',
-			backgroundColour2: '#9d174d',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'gloss-over.png',
-			iconType: 'md',
-			iconMd: 'movie_creation',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-camera',
-		name: 'Camera Toggle',
-		settings: {
-			textText: 'CAM',
-			textSize: '24px',
-			textColour: '#ffffff',
-			textFont: 'Inter',
-			textTracking: '1',
-			textLineHeight: '0.9',
-			textWeight: '600',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#0891b2',
-			backgroundColour1: '#06b6d4',
-			backgroundColour2: '#164e63',
-			backgroundGradient: 'vertical',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'jelly.png',
-			iconType: 'md',
-			iconMd: 'videocam',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'green',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-counter',
-		name: 'Counter',
-		settings: {
-			textText: '',
-			textSize: '28px',
-			textColour: '#ffffff',
-			textFont: 'Inter',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'none',
-			textShadow: 'none',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#22c55e',
-			backgroundColour1: '#4ade80',
-			backgroundColour2: '#15803d',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'jelly.png',
-			iconType: 'char',
-			iconMd: 'add',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '+1',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-chat',
-		name: 'Chat',
-		settings: {
-			textText: 'CHAT',
-			textSize: '26px',
-			textColour: '#ffffff',
-			textFont: 'Quicksand',
-			textTracking: '1',
-			textLineHeight: '0.9',
-			textWeight: '700',
-			textTransform: 'uppercase',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#10b981',
-			backgroundColour1: '#34d399',
-			backgroundColour2: '#065f46',
-			backgroundGradient: 'diagonal',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'spotlight.png',
-			iconType: 'md',
-			iconMd: 'chat_bubble',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#ffffff',
-			iconText: '',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	},
-	{
-		id: 'default-sponsor',
-		name: 'Sponsor',
-		settings: {
-			textText: 'Thanks!',
-			textSize: '28px',
-			textColour: '#ffffff',
-			textFont: 'Pacifico',
-			textTracking: '0',
-			textLineHeight: '0.9',
-			textWeight: '400',
-			textTransform: 'none',
-			textShadow: 'shadow',
-			backgroundStyle: 'gradient',
-			backgroundColour: '#7c3aed',
-			backgroundColour1: '#a78bfa',
-			backgroundColour2: '#4c1d95',
-			backgroundGradient: 'radial',
-			backgroundUrl: '',
-			backgroundOverlay: '0',
-			borderWidth: '0px',
-			borderColour: '#ffffff',
-			borderRadius: '15%',
-			overlay: 'jelly.png',
-			iconType: 'char',
-			iconMd: 'favorite',
-			iconSize: '80px',
-			iconPosition: 'inline',
-			iconColour: '#f472b6',
-			iconText: '❤️',
-			iconUrl: '',
-			iconOpacity: '1',
-			iconRotation: '0',
-			iconFlip: 'none',
-			iconShadow: 'none',
-			badge: 'none',
-			badgePosition: 'top-right'
-		}
-	}
+	{ id: 'default-live', name: 'Live Stream', settings: { textText: 'Go Live', textSize: '56px', textColour: '#ffffff', textFont: 'Bebas Neue', textTracking: '3', textLineHeight: '0.9', textWeight: '400', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#ef4444', backgroundColour1: '#dc2626', backgroundColour2: '#7f1d1d', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'gloss-over.png', iconType: 'md', iconMd: 'sensors', iconSize: '110px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-mute', name: 'Mute Mic', settings: { textText: 'MUTE', textSize: '24px', textColour: '#ffffff', textFont: 'Inter', textTracking: '3', textLineHeight: '0.9', textWeight: '600', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'solid', backgroundColour: '#1e293b', backgroundColour1: '#1e293b', backgroundColour2: '#0f172a', backgroundGradient: 'vertical', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '6px', borderColour: '#ef4444', borderRadius: '15%', overlay: 'none.png', iconType: 'md', iconMd: 'mic_off', iconSize: '110px', iconPosition: 'inline', iconColour: '#ef4444', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-gaming', name: 'Game Mode', settings: { textText: 'GAME', textSize: '44px', textColour: '#00ff88', textFont: 'Press Start 2P', textTracking: '0', textLineHeight: '1.1', textWeight: '400', textTransform: 'uppercase', textShadow: 'glow', backgroundStyle: 'gradient', backgroundColour: '#0f0f23', backgroundColour1: '#0f0f23', backgroundColour2: '#1a1a3e', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '6px', borderColour: '#00ff88', borderRadius: '15%', overlay: 'scanlines.png', iconType: 'md', iconMd: 'sports_esports', iconSize: '110px', iconPosition: 'inline', iconColour: '#00ff88', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'glow', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-scene', name: 'Scene Switch', settings: { textText: 'Scene 1', textSize: '24px', textColour: '#ffffff', textFont: 'Poppins', textTracking: '0', textLineHeight: '0.9', textWeight: '600', textTransform: 'none', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#6366f1', backgroundColour1: '#6366f1', backgroundColour2: '#4338ca', backgroundGradient: 'diagonal', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'jelly.png', iconType: 'md', iconMd: 'dashboard', iconSize: '80px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '0.9', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-music', name: 'Play Music', settings: { textText: '', textSize: '32px', textColour: '#ffffff', textFont: 'Hubot Sans', textTracking: '0', textLineHeight: '0.9', textWeight: '700', textTransform: 'none', textShadow: 'none', backgroundStyle: 'gradient', backgroundColour: '#1db954', backgroundColour1: '#1db954', backgroundColour2: '#14833b', backgroundGradient: 'vertical', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '50%', overlay: 'gloss-diagonal.png', iconType: 'md', iconMd: 'play_arrow', iconSize: '140px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-discord', name: 'Discord', settings: { textText: 'Discord', textSize: '28px', textColour: '#ffffff', textFont: 'Nunito', textTracking: '0', textLineHeight: '0.9', textWeight: '700', textTransform: 'none', textShadow: 'shadow', backgroundStyle: 'solid', backgroundColour: '#5865f2', backgroundColour1: '#5865f2', backgroundColour2: '#4752c4', backgroundGradient: 'vertical', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'none.png', iconType: 'md', iconMd: 'headset_mic', iconSize: '180px', iconPosition: 'behind', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '0.2', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'green', badgePosition: 'top-right' } },
+	{ id: 'default-brb', name: 'Be Right Back', settings: { textText: 'BRB', textSize: '56px', textColour: '#fbbf24', textFont: 'Permanent Marker', textTracking: '2', textLineHeight: '0.9', textWeight: '400', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#1e1b4b', backgroundColour1: '#312e81', backgroundColour2: '#0f0a1e', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#fbbf24', borderRadius: '15%', overlay: 'vignette.png', iconType: 'md', iconMd: 'schedule', iconSize: '80px', iconPosition: 'inline', iconColour: '#fbbf24', iconText: '', iconUrl: '', iconOpacity: '0.8', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'orange', badgePosition: 'top-right' } },
+	{ id: 'default-recording', name: 'Recording', settings: { textText: 'REC', textSize: '32px', textColour: '#ffffff', textFont: 'JetBrains Mono', textTracking: '3', textLineHeight: '0.9', textWeight: '700', textTransform: 'uppercase', textShadow: 'glow', backgroundStyle: 'solid', backgroundColour: '#18181b', backgroundColour1: '#18181b', backgroundColour2: '#09090b', backgroundGradient: 'vertical', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '3px', borderColour: '#ef4444', borderRadius: '15%', overlay: 'inner-shadow.png', iconType: 'md', iconMd: 'radio_button_checked', iconSize: '80px', iconPosition: 'inline', iconColour: '#ef4444', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'glow', badge: 'red', badgePosition: 'top-left' } },
+	{ id: 'default-soundfx', name: 'Sound Effect', settings: { textText: 'Air Horn', textSize: '32px', textColour: '#ffffff', textFont: 'Quicksand', textTracking: '0', textLineHeight: '0.9', textWeight: '700', textTransform: 'none', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#f97316', backgroundColour1: '#fb923c', backgroundColour2: '#c2410c', backgroundGradient: 'diagonal', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'jelly.png', iconType: 'char', iconMd: 'volume_up', iconSize: '110px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '📯', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-focus', name: 'Focus Mode', settings: { textText: 'FOCUS', textSize: '56px', textColour: '#ffffff', textFont: 'Bebas Neue', textTracking: '4', textLineHeight: '0.9', textWeight: '400', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#0ea5e9', backgroundColour1: '#0284c7', backgroundColour2: '#0c4a6e', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'none.png', iconType: 'md', iconMd: 'do_not_disturb_on', iconSize: '180px', iconPosition: 'behind', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '0.15', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-screenshot', name: 'Screenshot', settings: { textText: '', textSize: '32px', textColour: '#ffffff', textFont: 'Inter', textTracking: '0', textLineHeight: '0.9', textWeight: '600', textTransform: 'none', textShadow: 'none', backgroundStyle: 'gradient', backgroundColour: '#8b5cf6', backgroundColour1: '#a78bfa', backgroundColour2: '#5b21b6', backgroundGradient: 'diagonal', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '6px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'corner-glow.png', iconType: 'md', iconMd: 'screenshot', iconSize: '110px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-clip', name: 'Clip That', settings: { textText: 'CLIP', textSize: '28px', textColour: '#ffffff', textFont: 'Oswald', textTracking: '2', textLineHeight: '0.9', textWeight: '700', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#ec4899', backgroundColour1: '#f472b6', backgroundColour2: '#9d174d', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'gloss-over.png', iconType: 'md', iconMd: 'movie_creation', iconSize: '80px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-camera', name: 'Camera Toggle', settings: { textText: 'CAM', textSize: '24px', textColour: '#ffffff', textFont: 'Inter', textTracking: '1', textLineHeight: '0.9', textWeight: '600', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#0891b2', backgroundColour1: '#06b6d4', backgroundColour2: '#164e63', backgroundGradient: 'vertical', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'jelly.png', iconType: 'md', iconMd: 'videocam', iconSize: '80px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'green', badgePosition: 'top-right' } },
+	{ id: 'default-counter', name: 'Counter', settings: { textText: '', textSize: '28px', textColour: '#ffffff', textFont: 'Inter', textTracking: '0', textLineHeight: '0.9', textWeight: '700', textTransform: 'none', textShadow: 'none', backgroundStyle: 'gradient', backgroundColour: '#22c55e', backgroundColour1: '#4ade80', backgroundColour2: '#15803d', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'jelly.png', iconType: 'char', iconMd: 'add', iconSize: '80px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '+1', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-chat', name: 'Chat', settings: { textText: 'CHAT', textSize: '26px', textColour: '#ffffff', textFont: 'Quicksand', textTracking: '1', textLineHeight: '0.9', textWeight: '700', textTransform: 'uppercase', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#10b981', backgroundColour1: '#34d399', backgroundColour2: '#065f46', backgroundGradient: 'diagonal', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'spotlight.png', iconType: 'md', iconMd: 'chat_bubble', iconSize: '80px', iconPosition: 'inline', iconColour: '#ffffff', iconText: '', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
+	{ id: 'default-sponsor', name: 'Sponsor', settings: { textText: 'Thanks!', textSize: '28px', textColour: '#ffffff', textFont: 'Pacifico', textTracking: '0', textLineHeight: '0.9', textWeight: '400', textTransform: 'none', textShadow: 'shadow', backgroundStyle: 'gradient', backgroundColour: '#7c3aed', backgroundColour1: '#a78bfa', backgroundColour2: '#4c1d95', backgroundGradient: 'radial', backgroundUrl: '', backgroundOverlay: '0', borderWidth: '0px', borderColour: '#ffffff', borderRadius: '15%', overlay: 'jelly.png', iconType: 'char', iconMd: 'favorite', iconSize: '80px', iconPosition: 'inline', iconColour: '#f472b6', iconText: '❤️', iconUrl: '', iconOpacity: '1', iconRotation: '0', iconFlip: 'none', iconShadow: 'none', badge: 'none', badgePosition: 'top-right' } },
 ];
 
-// Template storage key
 const TEMPLATES_STORAGE_KEY = 'buttonDesigner_templates';
 
-// Get user templates from localStorage
 function getUserTemplates() {
 	try {
 		const stored = localStorage.getItem(TEMPLATES_STORAGE_KEY);
@@ -1332,7 +721,6 @@ function getUserTemplates() {
 	}
 }
 
-// Save user templates to localStorage
 function setUserTemplates(templates) {
 	try {
 		localStorage.setItem(TEMPLATES_STORAGE_KEY, JSON.stringify(templates));
@@ -1344,7 +732,6 @@ function setUserTemplates(templates) {
 	}
 }
 
-// Get current design settings as a template object
 function getCurrentSettings() {
 	const settings = {};
 	const controls = [
@@ -1354,108 +741,62 @@ function getCurrentSettings() {
 		'borderWidth', 'borderColour', 'borderRadius', 'overlay', 'iconType', 'iconSize', 'iconPosition',
 		'iconColour', 'iconText', 'iconUrl', 'iconOpacity', 'iconRotation', 'iconFlip', 'iconShadow', 'badge', 'badgePosition'
 	];
-	
 	controls.forEach(key => {
 		const el = document.getElementById(key + 'Control');
-		if(el) {
-			settings[key] = el.value;
-		}
+		if(el) settings[key] = el.value;
 	});
-	
-	// Get iconMd from localStorage since it's set differently
 	settings.iconMd = localStorage.getItem('iconMd') || 'radio_button_checked';
-	
 	return settings;
 }
 
-// Check if current design uses custom uploaded images
 function hasCustomImage() {
 	const info = getCustomImageInfo();
 	return info.hasBackgroundImage || info.hasIconImage;
 }
 
-// Get detailed info about custom images
 function getCustomImageInfo() {
 	const backgroundStyle = document.getElementById('backgroundStyleControl')?.value;
 	const iconType = document.getElementById('iconTypeControl')?.value;
 	const bgFileInput = document.getElementById('backgroundImageControl');
 	const iconFileInput = document.getElementById('iconUploadControl');
-	
 	return {
 		hasBackgroundImage: backgroundStyle === 'image' && bgFileInput?.files?.length > 0,
 		hasIconImage: iconType === 'upload' && iconFileInput?.files?.length > 0
 	};
 }
 
-// Apply template settings to the UI
 function applyTemplate(settings, showNotification = false, notificationMessage = '') {
-	// Apply each setting to its control
 	Object.keys(settings).forEach(key => {
 		const el = document.getElementById(key + 'Control');
 		if(el) {
-			// Convert \n to actual newlines for text fields
 			let value = settings[key];
-			if(key === 'textText' && typeof value === 'string') {
-				value = value.replace(/\\n/g, '\n');
-			}
+			if(key === 'textText' && typeof value === 'string') value = value.replace(/\\n/g, '\n');
 			el.value = value;
-			// Also update localStorage
 			localStorage.setItem(key, value);
 		}
 	});
-	
-	// Handle iconMd specially
-	if(settings.iconMd) {
-		localStorage.setItem('iconMd', settings.iconMd);
-	}
-	
-	// Update Choices.js dropdowns FIRST so the UI reflects correct selections
+	if(settings.iconMd) localStorage.setItem('iconMd', settings.iconMd);
 	updateChoicesDropdowns();
-	
-	// Trigger all control functions to update the preview
-	controlTextText();
-	controlTextColour();
-	controlTextFont();
-	controlTextSize();
-	controlTextTracking();
-	controlTextLineHeight();
-	controlTextWeight();
-	controlTextTransform();
-	controlBorderWidth();
-	controlBorderColour();
-	controlBorderRadius();
-	controlBackgroundStyle();
-	controlBackgroundOverlay();
-	controlOverlay();
-	controlTextShadow();
-	controlIconType();
-	controlIconEffects();
-	controlBadge();
-	
-	// Update range value displays
+	controlTextText(); controlTextColour(); controlTextFont(); controlTextSize();
+	controlTextTracking(); controlTextLineHeight(); controlTextWeight(); controlTextTransform();
+	controlBorderWidth(); controlBorderColour(); controlBorderRadius();
+	controlBackgroundStyle(); controlBackgroundOverlay(); controlOverlay();
+	controlTextShadow(); controlIconType(); controlIconEffects(); controlBadge();
 	document.getElementById('trackingValue').textContent = document.getElementById('textTrackingControl').value + 'px';
 	document.getElementById('lineHeightValue').textContent = document.getElementById('textLineHeightControl').value;
 	document.getElementById('iconOpacityValue').textContent = Math.round(document.getElementById('iconOpacityControl').value * 100) + '%';
 	const overlayValueEl = document.getElementById('backgroundOverlayValue');
 	const overlayControlEl = document.getElementById('backgroundOverlayControl');
-	if(overlayValueEl && overlayControlEl) {
-		overlayValueEl.textContent = Math.round(parseFloat(overlayControlEl.value) * 100) + '%';
-	}
-	
-	if(showNotification && notificationMessage) {
-		showTemplateNotification(notificationMessage);
-	}
+	if(overlayValueEl && overlayControlEl) overlayValueEl.textContent = Math.round(parseFloat(overlayControlEl.value) * 100) + '%';
+	if(showNotification && notificationMessage) showTemplateNotification(notificationMessage);
 }
 
-// Update Choices.js dropdowns after changing values programmatically
 function updateChoicesDropdowns() {
-	// Get all Choices.js instances and update them
 	const selects = ['textFontControl', 'textSizeControl', 'textWeightControl', 'textTransformControl',
 		'textShadowControl', 'iconTypeControl', 'iconSizeControl', 'iconPositionControl',
 		'backgroundStyleControl', 'backgroundGradientControl', 'borderWidthControl', 'borderRadiusControl',
 		'overlayControl', 'badgeControl', 'badgePositionControl', 'iconRotationControl', 'iconFlipControl',
 		'exportSizeControl'];
-	
 	selects.forEach(id => {
 		const el = document.getElementById(id);
 		if(el && window.choicesInstances && window.choicesInstances[id]) {
@@ -1464,386 +805,194 @@ function updateChoicesDropdowns() {
 	});
 }
 
-// Load a template (either default or user-saved)
 function loadTemplate(templateId, isDefault = false) {
 	let template;
-	
 	if(isDefault) {
 		template = defaultTemplates.find(t => t.id === templateId);
 	} else {
 		const userTemplates = getUserTemplates();
 		template = userTemplates.find(t => t.id === templateId);
 	}
-	
-	if(!template) {
-		console.error('Template not found:', templateId);
-		return;
-	}
-	
-	// Check if template has custom image flags (support both old and new format)
+	if(!template) { console.error('Template not found:', templateId); return; }
 	const hasCustomBg = template.hasCustomBackgroundImage || (template.hasCustomImage && template.settings?.backgroundStyle === 'image');
 	const hasCustomIcon = template.hasCustomIconImage || (template.hasCustomImage && template.settings?.iconType === 'upload');
 	const hasAnyCustom = hasCustomBg || hasCustomIcon;
-	
 	if(hasAnyCustom) {
 		let msg = 'Template loaded! This design originally used ';
-		if(hasCustomBg && hasCustomIcon) {
-			msg += 'custom images for both background and icon.';
-		} else if(hasCustomBg) {
-			msg += 'a custom background image.';
-		} else {
-			msg += 'a custom icon image.';
-		}
+		if(hasCustomBg && hasCustomIcon) msg += 'custom images for both background and icon.';
+		else if(hasCustomBg) msg += 'a custom background image.';
+		else msg += 'a custom icon image.';
 		msg += ' Please re-upload in the appropriate section.';
 		showTemplateNotification(msg, true);
 	}
-	
-	applyTemplate(template.settings, !hasAnyCustom, `Template \"${template.name}\" loaded!`);
-	
-	// Track template load
+	applyTemplate(template.settings, !hasAnyCustom, `Template "${template.name}" loaded!`);
 	trackEvent('Template', 'Loaded', isDefault ? 'default' : 'user', templateId);
 }
 
-// Delete a user template
 function deleteTemplate(templateId) {
-	if(!confirm('Delete this template? This cannot be undone.')) {
-		return;
-	}
-	
+	if(!confirm('Delete this template? This cannot be undone.')) return;
 	const templates = getUserTemplates();
 	const filtered = templates.filter(t => t.id !== templateId);
 	setUserTemplates(filtered);
-	
 	trackEvent('Template', 'Deleted', 'user', templateId);
 }
 
-// Open save template modal
 function openSaveTemplateModal() {
 	const modal = document.getElementById('saveTemplateModal');
 	const nameInput = document.getElementById('templateNameInput');
 	const customImageWarning = document.getElementById('customImageWarning');
-	
-	// Pre-fill with current button text
 	const currentText = document.getElementById('textTextControl')?.value || '';
 	nameInput.value = currentText ? `${currentText} Button` : '';
-	
-	// Show/hide custom image warning
-	if(hasCustomImage()) {
-		customImageWarning.classList.remove('hidden');
-	} else {
-		customImageWarning.classList.add('hidden');
-	}
-	
+	if(hasCustomImage()) customImageWarning.classList.remove('hidden');
+	else customImageWarning.classList.add('hidden');
 	modal.classList.remove('hidden');
 	nameInput.focus();
 }
 
-// Close save template modal
 function closeSaveTemplateModal() {
-	const modal = document.getElementById('saveTemplateModal');
-	modal.classList.add('hidden');
+	document.getElementById('saveTemplateModal').classList.add('hidden');
 }
 
-// Save template from modal
 function saveTemplate() {
 	const nameInput = document.getElementById('templateNameInput');
 	const name = nameInput.value.trim();
-	
-	if(!name) {
-		alert('Please enter a template name.');
-		nameInput.focus();
-		return;
-	}
-	
+	if(!name) { alert('Please enter a template name.'); nameInput.focus(); return; }
 	const templates = getUserTemplates();
 	const newTemplate = {
-		id: 'user-' + Date.now(),
-		name: name,
-		settings: getCurrentSettings(),
+		id: 'user-' + Date.now(), name: name, settings: getCurrentSettings(),
 		hasCustomBackgroundImage: getCustomImageInfo().hasBackgroundImage,
 		hasCustomIconImage: getCustomImageInfo().hasIconImage,
 		createdAt: new Date().toISOString()
 	};
-	
-	// If has custom image, reset those settings to defaults
 	if(newTemplate.hasCustomBackgroundImage || newTemplate.hasCustomIconImage) {
 		const bgStyle = document.getElementById('backgroundStyleControl')?.value;
 		const iconType = document.getElementById('iconTypeControl')?.value;
-		
-		if(bgStyle === 'image') {
-			newTemplate.settings.backgroundStyle = 'solid';
-			newTemplate.settings.backgroundColour = '#894bb8';
-		}
-		if(iconType === 'upload') {
-			newTemplate.settings.iconType = 'none';
-		}
+		if(bgStyle === 'image') { newTemplate.settings.backgroundStyle = 'solid'; newTemplate.settings.backgroundColour = '#894bb8'; }
+		if(iconType === 'upload') newTemplate.settings.iconType = 'none';
 	}
-	
-	templates.unshift(newTemplate); // Add to beginning
+	templates.unshift(newTemplate);
 	setUserTemplates(templates);
-	
 	closeSaveTemplateModal();
-	showTemplateNotification(`Template \"${name}\" saved!`);
-	
-	// Open user templates section
+	showTemplateNotification(`Template "${name}" saved!`);
 	document.getElementById('userTemplatesSection').open = true;
-	
 	trackEvent('Template', 'Saved', 'user', newTemplate.id);
 }
 
-// Generate permalink for current design
 function generatePermalink() {
 	const settings = getCurrentSettings();
-	
-	// Mark if it has custom image
 	if(hasCustomImage()) {
 		settings._hasCustomImage = true;
 		const bgStyle = document.getElementById('backgroundStyleControl')?.value;
 		const iconType = document.getElementById('iconTypeControl')?.value;
-		
-		if(bgStyle === 'image') {
-			settings.backgroundStyle = 'solid';
-		}
-		if(iconType === 'upload') {
-			settings.iconType = 'none';
-		}
+		if(bgStyle === 'image') settings.backgroundStyle = 'solid';
+		if(iconType === 'upload') settings.iconType = 'none';
 	}
-	
-	// Encode settings as base64 URL-safe string
 	const jsonStr = JSON.stringify(settings);
 	const encoded = btoa(encodeURIComponent(jsonStr));
-	
 	return window.location.origin + window.location.pathname + '#template=' + encoded;
 }
 
-// Copy permalink to clipboard
 function copyPermalink() {
 	const permalink = generatePermalink();
 	const btn = document.getElementById('copyPermalinkBtn');
 	const previewBtn = document.getElementById('previewPermalinkBtn');
-	
 	navigator.clipboard.writeText(permalink).then(() => {
-		// Visual feedback for templates panel button
-		if(btn) {
-			btn.classList.add('copied');
-			btn.innerHTML = '<span class="material-symbols-outlined">check</span>';
-			setTimeout(() => {
-				btn.classList.remove('copied');
-				btn.innerHTML = '<span class="material-symbols-outlined">link</span>';
-			}, 2000);
-		}
-		
-		// Visual feedback for preview button
-		if(previewBtn) {
-			previewBtn.classList.add('copied');
-			previewBtn.innerHTML = '<span class="material-symbols-outlined">check</span>';
-			setTimeout(() => {
-				previewBtn.classList.remove('copied');
-				previewBtn.innerHTML = '<span class="material-symbols-outlined">link</span>';
-			}, 2000);
-		}
-		
-		// Show notification
-		if(hasCustomImage()) {
-			showTemplateNotification('Link copied! Note: Custom images cannot be included in the URL. Recipients will need to add their own images.', true);
-		} else {
-			showTemplateNotification('Shareable link copied to clipboard!');
-		}
-		
+		if(btn) { btn.classList.add('copied'); btn.innerHTML = '<span class="material-symbols-outlined">check</span>'; setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = '<span class="material-symbols-outlined">link</span>'; }, 2000); }
+		if(previewBtn) { previewBtn.classList.add('copied'); previewBtn.innerHTML = '<span class="material-symbols-outlined">check</span>'; setTimeout(() => { previewBtn.classList.remove('copied'); previewBtn.innerHTML = '<span class="material-symbols-outlined">link</span>'; }, 2000); }
+		if(hasCustomImage()) showTemplateNotification('Link copied! Note: Custom images cannot be included in the URL. Recipients will need to add their own images.', true);
+		else showTemplateNotification('Shareable link copied to clipboard!');
 		trackEvent('Template', 'Permalink Copied', hasCustomImage() ? 'with-custom-image' : 'complete');
-	}).catch(err => {
-		console.error('Failed to copy:', err);
-		// Fallback: show the URL in a prompt
-		prompt('Copy this link:', permalink);
-	});
+	}).catch(err => { console.error('Failed to copy:', err); prompt('Copy this link:', permalink); });
 }
 
-// Load template from URL hash
 function loadTemplateFromURL() {
 	const hash = window.location.hash;
-	if(!hash.startsWith('#template=')) {
-		return false;
-	}
-	
+	if(!hash.startsWith('#template=')) return false;
 	try {
 		const encoded = hash.substring('#template='.length);
 		const jsonStr = decodeURIComponent(atob(encoded));
 		const settings = JSON.parse(jsonStr);
-		
 		const hadCustomImage = settings._hasCustomImage;
 		delete settings._hasCustomImage;
-		
-		// Apply the template
 		applyTemplate(settings, false);
-		
-		// Show appropriate notification
-		if(hadCustomImage) {
-			showTemplateNotification('Template loaded from shared link! This design originally used a custom image. Please upload your own image to complete the design.', true);
-		} else {
-			showTemplateNotification('Template loaded from shared link!');
-		}
-		
-		// Open templates section
+		if(hadCustomImage) showTemplateNotification('Template loaded from shared link! This design originally used a custom image. Please upload your own image to complete the design.', true);
+		else showTemplateNotification('Template loaded from shared link!');
 		document.getElementById('templatesSection').open = true;
-		
-		// Clear the hash to prevent re-loading on refresh (but keep in history)
 		history.replaceState(null, '', window.location.pathname);
-		
 		trackEvent('Template', 'Loaded from URL', hadCustomImage ? 'with-custom-image' : 'complete');
-		
 		return true;
-	} catch(e) {
-		console.error('Failed to load template from URL:', e);
-		return false;
-	}
+	} catch(e) { console.error('Failed to load template from URL:', e); return false; }
 }
 
-// Show template notification
 function showTemplateNotification(message, isWarning = false) {
 	const notification = document.getElementById('templateNotification');
 	const textEl = document.getElementById('templateNotificationText');
-	
 	textEl.innerHTML = message;
 	notification.classList.add('visible');
 	notification.classList.toggle('warning', isWarning);
-	
-	// Open templates section if not already open
 	const templatesSection = document.getElementById('templatesSection');
-	if(templatesSection && !templatesSection.open) {
-		templatesSection.open = true;
-	}
-	
-	// Auto-dismiss after 5 seconds for success notifications
-	if(!isWarning) {
-		setTimeout(() => {
-			dismissTemplateNotification();
-		}, 5000);
-	}
+	if(templatesSection && !templatesSection.open) templatesSection.open = true;
+	if(!isWarning) setTimeout(() => dismissTemplateNotification(), 5000);
 }
 
-// Dismiss template notification
 function dismissTemplateNotification() {
-	const notification = document.getElementById('templateNotification');
-	notification.classList.remove('visible');
+	document.getElementById('templateNotification').classList.remove('visible');
 }
 
-// Render default templates grid
 function renderDefaultTemplates() {
 	const grid = document.getElementById('defaultTemplatesGrid');
 	if(!grid) return;
-	
 	let html = '';
-	defaultTemplates.forEach(template => {
-		html += createTemplateCardHTML(template, true);
-	});
+	defaultTemplates.forEach(template => { html += createTemplateCardHTML(template, true); });
 	grid.innerHTML = html;
 }
 
-// Render user templates grid
 function renderUserTemplates() {
 	const grid = document.getElementById('userTemplatesGrid');
 	if(!grid) return;
-	
 	const templates = getUserTemplates();
-	
-	if(templates.length === 0) {
-		grid.innerHTML = '<div class="no-templates">No saved templates yet. Save your current design above!</div>';
-		return;
-	}
-	
+	if(templates.length === 0) { grid.innerHTML = '<div class="no-templates">No saved templates yet. Save your current design above!</div>'; return; }
 	let html = '';
-	templates.forEach(template => {
-		html += createTemplateCardHTML(template, false);
-	});
+	templates.forEach(template => { html += createTemplateCardHTML(template, false); });
 	grid.innerHTML = html;
 }
 
-// Create HTML for a template card
 function createTemplateCardHTML(template, isDefault) {
 	const s = template.settings;
-	
-	// Check for custom images (support both old hasCustomImage and new separate flags)
 	const hasCustomBg = template.hasCustomBackgroundImage || (template.hasCustomImage && s.backgroundStyle === 'image');
 	const hasCustomIcon = template.hasCustomIconImage || (template.hasCustomImage && s.iconType === 'upload');
-	
-	// Generate background style
 	let bgStyle = '';
-	if(s.backgroundStyle === 'image' || hasCustomBg) {
-		// Checkerboard pattern for custom background images (upload)
-		bgStyle = 'background: repeating-conic-gradient(#808080 0% 25%, #c0c0c0 0% 50%) 50% / 20px 20px';
-	} else if(s.backgroundStyle === 'gradient') {
-		bgStyle = getGradientCSS(s.backgroundGradient, s.backgroundColour1, s.backgroundColour2);
-	} else {
-		bgStyle = `background-color: ${s.backgroundColour}`;
-	}
-	
-	// Scale border width for preview (preview is 60px, actual is 288px = ~0.21 ratio)
-	const scaledBorderWidth = s.borderWidth !== '0px' 
-		? Math.max(1, Math.round(parseFloat(s.borderWidth) * 0.21)) + 'px'
-		: '0px';
-	const borderStyle = scaledBorderWidth !== '0px' 
-		? `border: ${scaledBorderWidth} solid ${s.borderColour};` 
-		: '';
-	
-	// Text shadow effect
+	if(s.backgroundStyle === 'image' || hasCustomBg) bgStyle = 'background: repeating-conic-gradient(#808080 0% 25%, #c0c0c0 0% 50%) 50% / 20px 20px';
+	else if(s.backgroundStyle === 'gradient') bgStyle = getGradientCSS(s.backgroundGradient, s.backgroundColour1, s.backgroundColour2);
+	else bgStyle = `background-color: ${s.backgroundColour}`;
+	const scaledBorderWidth = s.borderWidth !== '0px' ? Math.max(1, Math.round(parseFloat(s.borderWidth) * 0.21)) + 'px' : '0px';
+	const borderStyle = scaledBorderWidth !== '0px' ? `border: ${scaledBorderWidth} solid ${s.borderColour};` : '';
 	let textShadowCSS = '';
 	switch(s.textShadow) {
 		case 'shadow': textShadowCSS = 'text-shadow: 1px 1px 2px rgba(0,0,0,0.5);'; break;
 		case 'outline': textShadowCSS = 'text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;'; break;
 		case 'glow': textShadowCSS = `text-shadow: 0 0 5px ${s.textColour}, 0 0 10px ${s.textColour};`; break;
-		case 'glow-hard': textShadowCSS = `text-shadow: 0 0 3px ${s.textColour}, 0 0 6px ${s.textColour};`; break;
 	}
-	
-	// Icon handling
 	const iconOpacity = s.iconOpacity || '1';
 	const iconShadow = s.iconShadow || 'none';
 	const isBehind = s.iconPosition === 'behind';
 	const showIcon = s.iconType && s.iconType !== 'none' && s.iconType !== 'upload' && s.iconType !== 'url';
-	
-	// Build icon filter for shadow/glow
 	let iconFilter = '';
-	if(iconShadow === 'shadow') {
-		iconFilter = 'filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));';
-	} else if(iconShadow === 'glow') {
-		iconFilter = `filter: drop-shadow(0 0 5px ${s.iconColour}80) drop-shadow(0 0 10px ${s.iconColour}50);`;
-	}
-	
+	if(iconShadow === 'shadow') iconFilter = 'filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));';
+	else if(iconShadow === 'glow') iconFilter = `filter: drop-shadow(0 0 5px ${s.iconColour}80) drop-shadow(0 0 10px ${s.iconColour}50);`;
 	let iconHtml = '';
 	if(showIcon) {
-		const iconStyle = isBehind 
-			? `position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: ${s.iconColour}; opacity: ${iconOpacity}; z-index: 1; ${iconFilter}`
-			: `font-size: 1.6rem; color: ${s.iconColour}; opacity: ${iconOpacity}; z-index: 2; position: relative; ${iconFilter}`;
-		
-		if(s.iconType === 'md') {
-			iconHtml = `<span class="material-symbols-outlined" style="${iconStyle}">${s.iconMd}</span>`;
-		} else if(s.iconType === 'char') {
-			iconHtml = `<span style="${iconStyle}">${s.iconText || '😄'}</span>`;
-		}
+		const iconStyle = isBehind ? `position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: ${s.iconColour}; opacity: ${iconOpacity}; z-index: 1; ${iconFilter}` : `font-size: 1.6rem; color: ${s.iconColour}; opacity: ${iconOpacity}; z-index: 2; position: relative; ${iconFilter}`;
+		if(s.iconType === 'md') iconHtml = `<span class="material-symbols-outlined" style="${iconStyle}">${s.iconMd}</span>`;
+		else if(s.iconType === 'char') iconHtml = `<span style="${iconStyle}">${s.iconText || '😄'}</span>`;
 	}
-	
-	// Show external URL icon in preview
 	if(s.iconType === 'url' && s.iconUrl) {
-		const iconStyle = isBehind 
-			? `position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 3rem; opacity: ${iconOpacity}; z-index: 1;`
-			: `height: 1.6rem; opacity: ${iconOpacity}; z-index: 2; position: relative;`;
+		const iconStyle = isBehind ? `position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 3rem; opacity: ${iconOpacity}; z-index: 1;` : `height: 1.6rem; opacity: ${iconOpacity}; z-index: 2; position: relative;`;
 		iconHtml = `<img src="${s.iconUrl}" style="${iconStyle}">`;
 	}
-	
-	// Show placeholder icon if custom uploaded icon image was used
-	if(s.iconType === 'upload' || hasCustomIcon) {
-		iconHtml = `<span class="material-symbols-outlined" style="font-size: 1.6rem; color: var(--text-muted); opacity: 0.5;">image</span>`;
-	}
-	
-	const textHtml = s.textText 
-		? `<span style="font-family: '${s.textFont}', sans-serif; font-size: .5rem; color: ${s.textColour}; font-weight: ${s.textWeight}; text-transform: ${s.textTransform}; line-height: 1.1; text-align: center; ${textShadowCSS} position: relative; z-index: 2; max-width: 90%; word-break: break-word;">${s.textText.replace(/\\n/g, ' ').replace(/\n/g, ' ')}</span>`
-		: '';
-	
-	// Overlay
-	const overlayHtml = (s.overlay && s.overlay !== 'none.png')
-		? `<img src="assets/overlays/${s.overlay}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: ${s.borderRadius}; mix-blend-mode: overlay; z-index: 10;">`
-		: '';
-	
-	// Badge
+	if(s.iconType === 'upload' || hasCustomIcon) iconHtml = `<span class="material-symbols-outlined" style="font-size: 1.6rem; color: var(--text-muted); opacity: 0.5;">image</span>`;
+	const textHtml = s.textText ? `<span style="font-family: '${s.textFont}', sans-serif; font-size: .5rem; color: ${s.textColour}; font-weight: ${s.textWeight}; text-transform: ${s.textTransform}; line-height: 1.1; text-align: center; ${textShadowCSS} position: relative; z-index: 2; max-width: 90%; word-break: break-word;">${s.textText.replace(/\\n/g, ' ').replace(/\n/g, ' ')}</span>` : '';
+	const overlayHtml = (s.overlay && s.overlay !== 'none.png') ? `<img src="assets/overlays/${s.overlay}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: ${s.borderRadius}; mix-blend-mode: overlay; z-index: 10;">` : '';
 	let badgeHtml = '';
 	if(s.badge && s.badge !== 'none') {
 		const badgeColors = { 'red': '#ef4444', 'green': '#22c55e', 'blue': '#3b82f6', 'yellow': '#eab308', 'orange': '#f97316', 'purple': '#a855f7' };
@@ -1851,53 +1000,15 @@ function createTemplateCardHTML(template, isDefault) {
 		const posStyles = { 'top-right': 'top:12%;right:12%', 'top-left': 'top:12%;left:12%', 'bottom-right': 'bottom:12%;right:12%', 'bottom-left': 'bottom:12%;left:12%' };
 		badgeHtml = `<div style="position:absolute;${posStyles[s.badgePosition] || posStyles['top-right']};width:10%;height:10%;border-radius:50%;background:${badgeColor};box-shadow:0 0 3px ${badgeColor};z-index:20;border:1px solid rgba(255,255,255,0.8)"></div>`;
 	}
-	
-	// Dark overlay for image backgrounds
 	let darkOverlayHtml = '';
 	const bgOverlay = parseFloat(s.backgroundOverlay) || 0;
-	if(bgOverlay > 0 && s.backgroundStyle === 'image') {
-		darkOverlayHtml = `<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:${bgOverlay};pointer-events:none;z-index:1;border-radius:${s.borderRadius};"></div>`;
-	}
-	
-	const actions = isDefault 
-		? ''
-		: `<div class="template-card-actions">
-			<button class="template-action-btn copy-btn" data-tooltip="Copy link" onclick="event.stopPropagation(); copyTemplatePermalink(this, '${template.id}')">
-				<span class="material-symbols-outlined">link</span>
-			</button>
-			<button class="template-action-btn delete" data-tooltip="Delete" onclick="event.stopPropagation(); deleteTemplate('${template.id}')">
-				<span class="material-symbols-outlined">delete</span>
-			</button>
-		</div>`;
-	
+	if(bgOverlay > 0 && s.backgroundStyle === 'image') darkOverlayHtml = `<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:${bgOverlay};pointer-events:none;z-index:1;border-radius:${s.borderRadius};"></div>`;
+	const actions = isDefault ? '' : `<div class="template-card-actions"><button class="template-action-btn copy-btn" data-tooltip="Copy link" onclick="event.stopPropagation(); copyTemplatePermalink(this, '${template.id}')"><span class="material-symbols-outlined">link</span></button><button class="template-action-btn delete" data-tooltip="Delete" onclick="event.stopPropagation(); deleteTemplate('${template.id}')"><span class="material-symbols-outlined">delete</span></button></div>`;
 	const hasAnyCustomImage = hasCustomBg || hasCustomIcon;
-	const meta = isDefault 
-		? '<span class="material-symbols-outlined" style="font-size: .75rem;">auto_awesome</span> Starter'
-		: (hasAnyCustomImage 
-			? '<span class="material-symbols-outlined" style="font-size: .75rem;">image</span> Has custom image'
-			: '<span class="material-symbols-outlined" style="font-size: .75rem;">person</span> Custom');
-	
-	return `
-		<div class="template-card" onclick="loadTemplate('${template.id}', ${isDefault})">
-			${actions}
-			<div class="template-card-preview">
-				<div class="preview-placeholder" style="${bgStyle}; ${borderStyle} border-radius: ${s.borderRadius}; position: relative; overflow: hidden;">
-					${darkOverlayHtml}
-					${iconHtml}
-					${textHtml}
-					${overlayHtml}
-					${badgeHtml}
-				</div>
-			</div>
-			<div class="template-card-info">
-				<div class="template-card-name">${escapeHtml(template.name)}</div>
-				<div class="template-card-meta">${meta}</div>
-			</div>
-		</div>
-	`;
+	const meta = isDefault ? '<span class="material-symbols-outlined" style="font-size: .75rem;">auto_awesome</span> Starter' : (hasAnyCustomImage ? '<span class="material-symbols-outlined" style="font-size: .75rem;">image</span> Has custom image' : '<span class="material-symbols-outlined" style="font-size: .75rem;">person</span> Custom');
+	return `<div class="template-card" onclick="loadTemplate('${template.id}', ${isDefault})">${actions}<div class="template-card-preview"><div class="preview-placeholder" style="${bgStyle}; ${borderStyle} border-radius: ${s.borderRadius}; position: relative; overflow: hidden;">${darkOverlayHtml}${iconHtml}${textHtml}${overlayHtml}${badgeHtml}</div></div><div class="template-card-info"><div class="template-card-name">${escapeHtml(template.name)}</div><div class="template-card-meta">${meta}</div></div></div>`;
 }
 
-// Helper to generate gradient CSS
 function getGradientCSS(type, color1, color2) {
 	switch(type) {
 		case 'horizontal': return `background: linear-gradient(90deg, ${color1}, ${color2})`;
@@ -1908,142 +1019,78 @@ function getGradientCSS(type, color1, color2) {
 	}
 }
 
-// Helper to escape HTML
 function escapeHtml(str) {
 	const div = document.createElement('div');
 	div.textContent = str;
 	return div.innerHTML;
 }
 
-// Copy permalink for a specific user template
 function copyTemplatePermalink(btn, templateId) {
 	const templates = getUserTemplates();
 	const template = templates.find(t => t.id === templateId);
 	if(!template) return;
-	
-	// Temporarily apply settings to generate permalink
-	const settings = {...template.settings}; // Clone to avoid mutation
+	const settings = {...template.settings};
 	const hasAnyCustom = template.hasCustomBackgroundImage || template.hasCustomIconImage || template.hasCustomImage;
-	if(hasAnyCustom) {
-		settings._hasCustomImage = true;
-	}
-	
+	if(hasAnyCustom) settings._hasCustomImage = true;
 	const jsonStr = JSON.stringify(settings);
 	const encoded = btoa(encodeURIComponent(jsonStr));
 	const permalink = window.location.origin + window.location.pathname + '#template=' + encoded;
-	
 	navigator.clipboard.writeText(permalink).then(() => {
-		// Show visual feedback on button
 		if(btn) {
 			const icon = btn.querySelector('.material-symbols-outlined');
 			const originalIcon = icon?.textContent;
 			const originalTooltip = btn.dataset.tooltip;
-			
-			btn.classList.add('copied');
-			btn.classList.add('tooltip-locked');
+			btn.classList.add('copied', 'tooltip-locked');
 			btn.dataset.tooltip = 'Copied!';
 			if(icon) icon.textContent = 'check';
-			
-			// Show the "Copied!" tooltip
 			showTooltip(btn, 'Copied!');
-			
-			setTimeout(() => {
-				btn.classList.remove('copied');
-				btn.classList.remove('tooltip-locked');
-				btn.dataset.tooltip = originalTooltip;
-				if(icon) icon.textContent = originalIcon;
-				hideTooltip();
-			}, 1500);
+			setTimeout(() => { btn.classList.remove('copied', 'tooltip-locked'); btn.dataset.tooltip = originalTooltip; if(icon) icon.textContent = originalIcon; hideTooltip(); }, 1500);
 		}
 		trackEvent('Template', 'Permalink Copied', 'saved-template');
-	}).catch(err => {
-		prompt('Copy this link:', permalink);
-	});
+	}).catch(err => { prompt('Copy this link:', permalink); });
 }
 
-// Update user template count badge
 function updateUserTemplateCount() {
 	const countEl = document.getElementById('userTemplateCount');
-	if(countEl) {
-		const count = getUserTemplates().length;
-		countEl.textContent = count;
-	}
+	if(countEl) countEl.textContent = getUserTemplates().length;
 }
 
-// Initialize templates feature
 function initTemplates() {
 	renderDefaultTemplates();
 	renderUserTemplates();
 	updateUserTemplateCount();
-	
-	// Check for template in URL (after a small delay to let controls initialize)
-	setTimeout(() => {
-		loadTemplateFromURL();
-	}, 100);
-	
-	// Handle Enter key in modal
-	document.getElementById('templateNameInput')?.addEventListener('keydown', (e) => {
-		if(e.key === 'Enter') {
-			saveTemplate();
-		}
-	});
-	
-	// Close modal on outside click
-	document.getElementById('saveTemplateModal')?.addEventListener('click', (e) => {
-		if(e.target.classList.contains('modal-overlay')) {
-			closeSaveTemplateModal();
-		}
-	});
-	
-	// Close modal on Escape key
-	document.addEventListener('keydown', (e) => {
-		if(e.key === 'Escape') {
-			closeSaveTemplateModal();
-		}
-	});
+	setTimeout(() => loadTemplateFromURL(), 100);
+	document.getElementById('templateNameInput')?.addEventListener('keydown', (e) => { if(e.key === 'Enter') saveTemplate(); });
+	document.getElementById('saveTemplateModal')?.addEventListener('click', (e) => { if(e.target.classList.contains('modal-overlay')) closeSaveTemplateModal(); });
+	document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeSaveTemplateModal(); });
 }
 
 // ========================================
 // END TEMPLATES FEATURE
 // ========================================
 
-// Matomo event tracking helper
-let isInitializing = true; // Flag to prevent tracking during page load
+let isInitializing = true;
 
 function trackEvent(category, action, name = null, value = null) {
-	if (isInitializing) return; // Don't track during initialization
+	if (isInitializing) return;
 	if (typeof _paq !== 'undefined') {
-		// Use trackEvent with a callback to ensure it's queued
-		if (name && value) {
-			_paq.push(['trackEvent', category, action, name, value]);
-		} else if (name) {
-			_paq.push(['trackEvent', category, action, name]);
-		} else {
-			_paq.push(['trackEvent', category, action]);
-		}
-		// Force send immediately for reliability on mobile
+		if (name && value) _paq.push(['trackEvent', category, action, name, value]);
+		else if (name) _paq.push(['trackEvent', category, action, name]);
+		else _paq.push(['trackEvent', category, action]);
 		_paq.push(['enableLinkTracking']);
 	}
 }
 
-// Banner dismiss function
 function dismissBanner() {
 	const banner = document.getElementById('announcementBanner');
-	if (banner) {
-		banner.classList.add('hidden');
-		localStorage.setItem('bannerDismissed', 'true');
-	}
+	if (banner) { banner.classList.add('hidden'); localStorage.setItem('bannerDismissed', 'true'); }
 }
 
-// Check banner state on load
 function checkBannerState() {
 	const banner = document.getElementById('announcementBanner');
-	if (banner && localStorage.getItem('bannerDismissed') === 'true') {
-		banner.classList.add('hidden');
-	}
+	if (banner && localStorage.getItem('bannerDismissed') === 'true') banner.classList.add('hidden');
 }
 
-// Text control functions
 function controlTextText() {
 	const textText = document.getElementById('textTextControl');
 	const textPreview = document.getElementById('textPreview');
@@ -2072,7 +1119,6 @@ function controlTextFont() {
 	localStorage.setItem('textFont', textFont.value);
 }
 
-// Advanced text options
 function controlTextTracking() {
 	const tracking = document.getElementById('textTrackingControl');
 	const textPreview = document.getElementById('textPreview');
@@ -2106,27 +1152,16 @@ function controlTextTransform() {
 function controlTextShadow() {
 	const textShadow = document.getElementById('textShadowControl').value;
 	const buttonText = document.getElementById('textPreview');
-
 	const textColour = document.getElementById('textColourControl').value;
-	
 	switch(textShadow) {
-		case 'none':
-			buttonText.style.textShadow = 'none';
-			break;
-		case 'shadow':
-			buttonText.style.textShadow = '.025em .025em .05em rgba(0,0,0,0.35)';
-			break;
-		case 'glow':
-			buttonText.style.textShadow = `0 0 6px ${textColour}80, 0 0 12px ${textColour}50`;
-			break;
-		case 'outline':
-			buttonText.style.textShadow = '-1px -1px 0 rgba(0,0,0,0.5), 1px -1px 0 rgba(0,0,0,0.5), -1px 1px 0 rgba(0,0,0,0.5), 1px 1px 0 rgba(0,0,0,0.5)';
-			break;
+		case 'none': buttonText.style.textShadow = 'none'; break;
+		case 'shadow': buttonText.style.textShadow = '.025em .025em .05em rgba(0,0,0,0.35)'; break;
+		case 'glow': buttonText.style.textShadow = `0 0 6px ${textColour}80, 0 0 12px ${textColour}50`; break;
+		case 'outline': buttonText.style.textShadow = '-1px -1px 0 rgba(0,0,0,0.5), 1px -1px 0 rgba(0,0,0,0.5), -1px 1px 0 rgba(0,0,0,0.5), 1px 1px 0 rgba(0,0,0,0.5)'; break;
 	}
 	localStorage.setItem('textShadow', textShadow);
 }
 
-// Border controls
 function controlBorderWidth() {
 	const borderWidth = document.getElementById('borderWidthControl');
 	const buttonBackground = document.getElementById('buttonBackground');
@@ -2147,18 +1182,14 @@ function controlBorderRadius() {
 	const previewButton = document.getElementById('preview-button');
 	const buttonBackground = document.getElementById('buttonBackground');
 	const buttonOverlay = document.getElementById('buttonOverlay');
-	
-	// Apply radius value (handle percentage or pixel values)
 	const radiusValue = radius.includes('%') ? radius : radius + 'px';
 	previewButtonContainer.style.borderRadius = radiusValue;
 	previewButton.style.borderRadius = radiusValue;
 	buttonBackground.style.borderRadius = radiusValue;
 	buttonOverlay.style.borderRadius = radiusValue;
-	
 	localStorage.setItem('borderRadius', radius);
 }
 
-// Icon effects control
 function controlIconEffects() {
 	const opacity = document.getElementById('iconOpacityControl').value;
 	const rotation = document.getElementById('iconRotationControl').value;
@@ -2166,109 +1197,58 @@ function controlIconEffects() {
 	const shadow = document.getElementById('iconShadowControl')?.value || 'none';
 	const buttonIconInner = document.getElementById('buttonIconInner');
 	const iconColour = document.getElementById('iconColourControl')?.value || '#ffffff';
-	
-	// Update opacity display
 	document.getElementById('iconOpacityValue').textContent = Math.round(opacity * 100) + '%';
-	
-	// Apply opacity
 	buttonIconInner.style.opacity = opacity;
-	
-	// Apply icon shadow/glow effect using filter for Material icons
 	switch(shadow) {
-		case 'none':
-			buttonIconInner.style.filter = 'none';
-			break;
-		case 'shadow':
-			buttonIconInner.style.filter = 'drop-shadow(2px 2px 3px rgba(0,0,0,0.5))';
-			break;
-		case 'glow':
-			buttonIconInner.style.filter = `drop-shadow(0 0 5px ${iconColour}80) drop-shadow(0 0 10px ${iconColour}50)`;
-			break;
+		case 'none': buttonIconInner.style.filter = 'none'; break;
+		case 'shadow': buttonIconInner.style.filter = 'drop-shadow(2px 2px 3px rgba(0,0,0,0.5))'; break;
+		case 'glow': buttonIconInner.style.filter = `drop-shadow(0 0 5px ${iconColour}80) drop-shadow(0 0 10px ${iconColour}50)`; break;
 	}
-	
-	// Build transform string
 	let transforms = [];
-	
-	if(rotation !== '0') {
-		transforms.push(`rotate(${rotation}deg)`);
-	}
-	
+	if(rotation !== '0') transforms.push(`rotate(${rotation}deg)`);
 	switch(flip) {
-		case 'horizontal':
-			transforms.push('scaleX(-1)');
-			break;
-		case 'vertical':
-			transforms.push('scaleY(-1)');
-			break;
-		case 'both':
-			transforms.push('scale(-1, -1)');
-			break;
+		case 'horizontal': transforms.push('scaleX(-1)'); break;
+		case 'vertical': transforms.push('scaleY(-1)'); break;
+		case 'both': transforms.push('scale(-1, -1)'); break;
 	}
-	
 	buttonIconInner.style.transform = transforms.length > 0 ? transforms.join(' ') : 'none';
-	
 	localStorage.setItem('iconOpacity', opacity);
 	localStorage.setItem('iconRotation', rotation);
 	localStorage.setItem('iconFlip', flip);
 	localStorage.setItem('iconShadow', shadow);
 }
 
-// Status badge control
 function controlBadge() {
 	const badge = document.getElementById('badgeControl').value;
 	const position = document.getElementById('badgePositionControl').value;
 	const badgeElement = document.getElementById('buttonBadge');
 	const positionRow = document.getElementById('badgePositionRow');
-	
 	if(badge === 'none') {
 		badgeElement.style.display = 'none';
 		positionRow.style.display = 'none';
 	} else {
 		badgeElement.style.display = 'block';
 		positionRow.style.display = 'block';
-		
-		// Set badge color
-		const colors = {
-			'red': '#ef4444',
-			'green': '#22c55e',
-			'orange': '#f97316',
-			'blue': '#3b82f6',
-			'purple': '#a855f7',
-			'white': '#ffffff'
-		};
+		const colors = { 'red': '#ef4444', 'green': '#22c55e', 'orange': '#f97316', 'blue': '#3b82f6', 'purple': '#a855f7', 'white': '#ffffff' };
 		badgeElement.style.backgroundColor = colors[badge] || '#ef4444';
-		
-		// Add glow effect for visibility
 		badgeElement.style.boxShadow = `0 0 8px ${colors[badge] || '#ef4444'}`;
-		
-		// Set position - more inset to avoid border radius clipping
 		badgeElement.style.top = position.includes('top') ? '20px' : 'auto';
 		badgeElement.style.bottom = position.includes('bottom') ? '20px' : 'auto';
 		badgeElement.style.left = position.includes('left') ? '20px' : 'auto';
 		badgeElement.style.right = position.includes('right') ? '20px' : 'auto';
 	}
-	
 	localStorage.setItem('badge', badge);
 	localStorage.setItem('badgePosition', position);
 }
 
-// Background controls
 function controlBackgroundStyle() {
 	const backgroundStyle = document.getElementById('backgroundStyleControl');
 	const buttonBackground = document.getElementById('buttonBackground');
 	localStorage.setItem('backgroundStyle', backgroundStyle.value);
-	
-	// Hide all option panels first
 	document.getElementById('backgroundSolidOptions').style.display = 'none';
 	document.getElementById('backgroundGradientOptions').style.display = 'none';
 	document.getElementById('backgroundImageOptions').style.display = 'none';
-	
-	// Reset background GIF flags when switching away from image background
-	if(backgroundStyle.value !== 'image') {
-		backgroundGif = { hasAnimated: false, data: null, file: null };
-		updateGifExportNote();
-	}
-	
+	if(backgroundStyle.value !== 'image') { backgroundGif = { hasAnimated: false, data: null, file: null }; updateGifExportNote(); }
 	switch(backgroundStyle.value) {
 		case 'solid':
 			document.getElementById('backgroundSolidOptions').style.display = 'block';
@@ -2276,96 +1256,56 @@ function controlBackgroundStyle() {
 			buttonBackground.style.backgroundImage = 'none';
 			localStorage.setItem('backgroundColour', document.getElementById('backgroundColourControl').value);
 			break;
-			
 		case 'gradient':
 			document.getElementById('backgroundGradientOptions').style.display = 'block';
 			const colour1 = document.getElementById('backgroundColour1Control').value;
 			const colour2 = document.getElementById('backgroundColour2Control').value;
 			const gradientType = document.getElementById('backgroundGradientControl').value;
-			
 			let gradientCSS;
 			switch(gradientType) {
-				case 'horizontal':
-					gradientCSS = `linear-gradient(90deg, ${colour1}, ${colour2})`;
-					break;
-				case 'vertical':
-					gradientCSS = `linear-gradient(180deg, ${colour1}, ${colour2})`;
-					break;
-				case 'radial':
-					gradientCSS = `radial-gradient(${colour1}, ${colour2})`;
-					break;
-				case 'diagonal':
-					gradientCSS = `linear-gradient(135deg, ${colour1}, ${colour2})`;
-					break;
+				case 'horizontal': gradientCSS = `linear-gradient(90deg, ${colour1}, ${colour2})`; break;
+				case 'vertical': gradientCSS = `linear-gradient(180deg, ${colour1}, ${colour2})`; break;
+				case 'radial': gradientCSS = `radial-gradient(${colour1}, ${colour2})`; break;
+				case 'diagonal': gradientCSS = `linear-gradient(135deg, ${colour1}, ${colour2})`; break;
 			}
 			buttonBackground.style.backgroundImage = gradientCSS;
 			localStorage.setItem('backgroundColour1', colour1);
 			localStorage.setItem('backgroundColour2', colour2);
 			localStorage.setItem('backgroundGradient', gradientType);
 			break;
-			
 		case 'image':
 			document.getElementById('backgroundImageOptions').style.display = 'block';
 			const fileInput = document.getElementById('backgroundImageControl');
-			
 			if(fileInput.files.length > 0) {
 				const file = fileInput.files[0];
 				const reader = new FileReader();
-				
 				reader.onload = function(e) {
 					buttonBackground.style.backgroundColor = 'transparent';
 					buttonBackground.style.backgroundImage = `url(${e.target.result})`;
-					
-					// Check if it's an animated GIF, otherwise reset background GIF flags
-					if(file.type === 'image/gif') {
-						checkIfAnimatedGif(file, 'background');
-					} else {
-						// Reset background GIF flags for non-GIF images
-						backgroundGif = { hasAnimated: false, data: null, file: null };
-						updateGifExportNote();
-					}
+					if(file.type === 'image/gif') checkIfAnimatedGif(file, 'background');
+					else { backgroundGif = { hasAnimated: false, data: null, file: null }; updateGifExportNote(); }
 				};
 				reader.readAsDataURL(file);
 			}
 			break;
 	}
-	
-	// Show/hide dark overlay options based on background type
 	const overlayOptions = document.getElementById('backgroundOverlayOptions');
-	if(overlayOptions) {
-		overlayOptions.style.display = backgroundStyle.value === 'image' ? 'block' : 'none';
-	}
-	
-	// Update GIF note based on current selections (background style may have changed)
+	if(overlayOptions) overlayOptions.style.display = backgroundStyle.value === 'image' ? 'block' : 'none';
 	updateGifExportNote();
-	
-	// Apply dark overlay
 	controlBackgroundOverlay();
 }
 
-// Background dark overlay control
 function controlBackgroundOverlay() {
 	const overlayControl = document.getElementById('backgroundOverlayControl');
 	const overlayValue = document.getElementById('backgroundOverlayValue');
 	const darkOverlay = document.getElementById('backgroundDarkOverlay');
-	
 	if(!overlayControl) return;
-	
 	const opacity = parseFloat(overlayControl.value);
 	localStorage.setItem('backgroundOverlay', opacity);
-	
-	// Update value display
-	if(overlayValue) {
-		overlayValue.textContent = Math.round(opacity * 100) + '%';
-	}
-	
-	// Update overlay element
-	if(darkOverlay) {
-		darkOverlay.style.opacity = opacity;
-	}
+	if(overlayValue) overlayValue.textContent = Math.round(opacity * 100) + '%';
+	if(darkOverlay) darkOverlay.style.opacity = opacity;
 }
 
-// Icon controls
 function controlIconType(md = null) {
 	const iconType = document.getElementById('iconTypeControl');
 	const buttonIcon = document.getElementById('buttonIcon');
@@ -2374,52 +1314,31 @@ function controlIconType(md = null) {
 	const iconPosition = document.getElementById('iconPositionControl');
 	const iconColour = document.getElementById('iconColourControl');
 	const iconText = document.getElementById('iconTextControl');
-	
-	// Save to localStorage
 	localStorage.setItem('iconType', iconType.value);
 	localStorage.setItem('iconSize', iconSize.value);
 	localStorage.setItem('iconPosition', iconPosition.value);
 	localStorage.setItem('iconColour', iconColour.value);
 	localStorage.setItem('iconText', iconText.value);
-	
 	if(md) {
 		localStorage.setItem('iconMd', md.dataset.iconUrl);
-		// Update selected state
 		document.querySelectorAll('#iconGrid .icon').forEach(i => i.classList.remove('selected'));
 		md.classList.add('selected');
 	}
-	
-	// Position handling
-	if(iconPosition.value === 'inline') {
-		buttonIcon.style.position = 'relative';
-		buttonIcon.style.height = iconSize.value;
-	} else {
-		buttonIcon.style.position = 'absolute';
-		buttonIcon.style.height = '100%';
-	}
-	
-	// Hide all icon-specific options first
-	document.querySelectorAll('.charIconOptions, .uploadIconOptions, .mdIconOptions, .urlIconOptions').forEach(el => {
-		el.style.display = 'none';
-	});
-	
+	if(iconPosition.value === 'inline') { buttonIcon.style.position = 'relative'; buttonIcon.style.height = iconSize.value; }
+	else { buttonIcon.style.position = 'absolute'; buttonIcon.style.height = '100%'; }
+	document.querySelectorAll('.charIconOptions, .uploadIconOptions, .mdIconOptions, .urlIconOptions').forEach(el => { el.style.display = 'none'; });
 	switch(iconType.value) {
-		case 'none':
-			buttonIcon.style.display = 'none';
-			break;
-			
+		case 'none': buttonIcon.style.display = 'none'; break;
 		case 'md':
 			document.querySelectorAll('.mdIconOptions').forEach(el => el.style.display = 'block');
 			buttonIcon.style.display = 'flex';
 			buttonIconInner.style.fontSize = iconSize.value;
 			buttonIconInner.style.height = iconSize.value;
-			
 			const iconName = localStorage.getItem('iconMd') || 'sentiment_very_satisfied';
 			buttonIconInner.innerHTML = `<span class="material-symbols-outlined">${iconName}</span>`;
 			buttonIconInner.querySelector('span').style.fontSize = iconSize.value;
 			buttonIconInner.style.color = iconColour.value;
 			break;
-			
 		case 'char':
 			document.querySelectorAll('.charIconOptions').forEach(el => el.style.display = 'block');
 			buttonIcon.style.display = 'flex';
@@ -2427,152 +1346,81 @@ function controlIconType(md = null) {
 			buttonIconInner.style.color = iconColour.value;
 			buttonIconInner.innerHTML = `<div class="char-text">${iconText.value}</div>`;
 			break;
-			
 		case 'upload':
 			document.querySelectorAll('.uploadIconOptions').forEach(el => el.style.display = 'block');
 			buttonIcon.style.display = 'flex';
 			buttonIconInner.style.height = iconSize.value;
-			
 			const uploadInput = document.getElementById('iconUploadControl');
 			if(uploadInput.files.length > 0) {
 				const file = uploadInput.files[0];
 				const reader = new FileReader();
-				
 				reader.onload = function(e) {
-					// For SVGs, we need special handling
-					if(file.type === 'image/svg+xml') {
-						buttonIconInner.innerHTML = `<img src="${e.target.result}" style="height: 100%; width: auto; max-width: 100%;">`;
-					} else {
-						buttonIconInner.innerHTML = `<img src="${e.target.result}">`;
-					}
-					
-					// Check for animated GIF in icon
-					if(file.type === 'image/gif') {
-						checkIfAnimatedGif(file, 'icon');
-					} else {
-						iconGif = { hasAnimated: false, data: null, file: null };
-						updateGifExportNote();
-					}
+					if(file.type === 'image/svg+xml') buttonIconInner.innerHTML = `<img src="${e.target.result}" style="height: 100%; width: auto; max-width: 100%;">`;
+					else buttonIconInner.innerHTML = `<img src="${e.target.result}">`;
+					if(file.type === 'image/gif') checkIfAnimatedGif(file, 'icon');
+					else { iconGif = { hasAnimated: false, data: null, file: null }; updateGifExportNote(); }
 				};
 				reader.readAsDataURL(file);
 			}
 			break;
-			
 		case 'url':
 			document.querySelectorAll('.urlIconOptions').forEach(el => el.style.display = 'block');
-			// Also show the effects options for URL icons
 			document.querySelectorAll('.charIconOptions.uploadIconOptions.mdIconOptions').forEach(el => el.style.display = 'block');
 			buttonIcon.style.display = 'flex';
 			buttonIconInner.style.height = iconSize.value;
-			
 			const iconUrl = document.getElementById('iconUrlControl').value;
 			localStorage.setItem('iconUrl', iconUrl);
-			
 			if(iconUrl) {
 				buttonIconInner.innerHTML = `<img src="${iconUrl}">`;
-				
-				// Assume GIFs from URL are animated
-				if(iconUrl.toLowerCase().includes('.gif')) {
-					iconGif = { hasAnimated: true, data: null, file: null, url: iconUrl };
-				} else {
-					iconGif = { hasAnimated: false, data: null, file: null };
-				}
+				if(iconUrl.toLowerCase().includes('.gif')) iconGif = { hasAnimated: true, data: null, file: null, url: iconUrl };
+				else iconGif = { hasAnimated: false, data: null, file: null };
 				updateGifExportNote();
 			}
 			break;
 	}
-	
-	// Update GIF note based on current selections (icon type may have changed)
 	updateGifExportNote();
 }
 
-// Overlay control
 function controlOverlay() {
 	const overlay = document.getElementById('overlayControl');
 	const buttonOverlay = document.getElementById('buttonOverlay');
 	buttonOverlay.src = 'assets/overlays/' + overlay.value;
 	localStorage.setItem('overlay', overlay.value);
-	if(overlay.value !== 'none.png') {
-	}
 }
 
-// Icon search with improved tag matching
 function iconSearch(elem) {
 	const query = elem.value.toLowerCase().trim();
 	const icons = document.querySelectorAll('#iconGrid .icon');
-	
-	if(!query) {
-		icons.forEach(icon => icon.style.display = 'flex');
-		return;
-	}
-	
+	if(!query) { icons.forEach(icon => icon.style.display = 'flex'); return; }
 	icons.forEach(icon => {
 		const searchData = icon.dataset.search.toLowerCase();
 		const tags = (icon.dataset.tags || '').toLowerCase();
-		
-		if(searchData.includes(query) || tags.includes(query)) {
-			icon.style.display = 'flex';
-		} else {
-			icon.style.display = 'none';
-		}
+		icon.style.display = (searchData.includes(query) || tags.includes(query)) ? 'flex' : 'none';
 	});
 }
 
-// Category filter
 function filterIconsByCategory(category) {
 	const icons = document.querySelectorAll('#iconGrid .icon');
-	const searchInput = document.getElementById('iconSearchInput');
-	searchInput.value = ''; // Clear search
-	
-	if(category === 'all') {
-		icons.forEach(icon => icon.style.display = 'flex');
-	} else {
-		icons.forEach(icon => {
-			if(icon.dataset.category === category) {
-				icon.style.display = 'flex';
-			} else {
-				icon.style.display = 'none';
-			}
-		});
-	}
+	document.getElementById('iconSearchInput').value = '';
+	if(category === 'all') { icons.forEach(icon => icon.style.display = 'flex'); return; }
+	icons.forEach(icon => { icon.style.display = icon.dataset.category === category ? 'flex' : 'none'; });
 }
 
-// Check if a GIF is animated (source: 'background' or 'icon')
 function checkIfAnimatedGif(file, source) {
 	const reader = new FileReader();
 	reader.onload = function(e) {
 		const arr = new Uint8Array(e.target.result);
-		// Check for GIF89a animation extension
 		let isAnimated = false;
-		
-		// Look for multiple image descriptors (0x2C) which indicates animation
 		let imageCount = 0;
-		for(let i = 0; i < arr.length - 1; i++) {
-			if(arr[i] === 0x00 && arr[i+1] === 0x2C) {
-				imageCount++;
-			}
-		}
-		
-		// Also check for graphic control extension (0x21 0xF9) which is used in animated GIFs
-		for(let i = 0; i < arr.length - 1; i++) {
-			if(arr[i] === 0x21 && arr[i+1] === 0xF9) {
-				isAnimated = true;
-				break;
-			}
-		}
-		
+		for(let i = 0; i < arr.length - 1; i++) { if(arr[i] === 0x00 && arr[i+1] === 0x2C) imageCount++; }
+		for(let i = 0; i < arr.length - 1; i++) { if(arr[i] === 0x21 && arr[i+1] === 0xF9) { isAnimated = true; break; } }
 		const hasAnimated = isAnimated && imageCount > 1;
 		const targetGif = source === 'background' ? backgroundGif : iconGif;
-		
 		if(hasAnimated) {
-			// Store the original file for export
 			targetGif.hasAnimated = true;
 			targetGif.file = file;
 			const dataReader = new FileReader();
-			dataReader.onload = function(e) {
-				targetGif.data = e.target.result;
-				updateGifExportNote();
-			};
+			dataReader.onload = function(e) { targetGif.data = e.target.result; updateGifExportNote(); };
 			dataReader.readAsDataURL(file);
 		} else {
 			targetGif.hasAnimated = false;
@@ -2584,46 +1432,28 @@ function checkIfAnimatedGif(file, source) {
 	reader.readAsArrayBuffer(file);
 }
 
-// Check if currently selected options include an animated GIF
 function getActiveAnimatedGif() {
 	const backgroundStyle = document.getElementById('backgroundStyleControl').value;
 	const iconType = document.getElementById('iconTypeControl').value;
-	
-	// Check background first (takes priority for export)
-	if(backgroundStyle === 'image' && backgroundGif.hasAnimated && backgroundGif.file) {
-		return { source: 'background', gif: backgroundGif };
-	}
-	
-	// Check icon
-	if(iconType === 'upload' && iconGif.hasAnimated && iconGif.file) {
-		return { source: 'icon', gif: iconGif };
-	}
-	
+	if(backgroundStyle === 'image' && backgroundGif.hasAnimated && backgroundGif.file) return { source: 'background', gif: backgroundGif };
+	if(iconType === 'upload' && iconGif.hasAnimated && iconGif.file) return { source: 'icon', gif: iconGif };
 	return null;
 }
 
-// Update GIF export note visibility
 function updateGifExportNote() {
 	const note = document.getElementById('gifExportNote');
-	if(note) {
-		const activeGif = getActiveAnimatedGif();
-		note.style.display = activeGif ? 'flex' : 'none';
-	}
+	if(note) { const activeGif = getActiveAnimatedGif(); note.style.display = activeGif ? 'flex' : 'none'; }
 }
 
-// Generate icon grid HTML
 function generateIconGrid() {
 	const iconGrid = document.getElementById('iconGrid');
 	if(!iconGrid) return;
-	
 	let html = '';
 	materialIcons.forEach(icon => {
 		const searchString = `${icon.name} ${icon.name.replace(/_/g, ' ')} ${icon.tags.join(' ')}`;
 		html += `<span data-search="${searchString}" data-tags="${icon.tags.join(' ')}" data-category="${icon.category}" class="icon material-symbols-outlined" data-icon-url="${icon.name}" onclick="controlIconType(this)" title="${icon.name.replace(/_/g, ' ')}">${icon.name}</span>`;
 	});
 	iconGrid.innerHTML = html;
-	
-	// Set up category buttons
 	document.querySelectorAll('.category-btn').forEach(btn => {
 		btn.addEventListener('click', function() {
 			document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
@@ -2633,211 +1463,90 @@ function generateIconGrid() {
 	});
 }
 
-// Reset to default settings
 function resetToDefaults() {
-	if(!confirm('Reset all settings to defaults? This will clear your current design.')) {
-		return;
-	}
-	
-	// Preserve user templates before clearing
+	if(!confirm('Reset all settings to defaults? This will clear your current design.')) return;
 	const savedTemplates = localStorage.getItem('buttonDesigner_templates');
-	
-	// Clear all localStorage
 	localStorage.clear();
-	
-	// Restore user templates
-	if(savedTemplates) {
-		localStorage.setItem('buttonDesigner_templates', savedTemplates);
-	}
-	
-	// Reload the page to apply defaults
+	if(savedTemplates) localStorage.setItem('buttonDesigner_templates', savedTemplates);
 	location.reload();
 }
 
-// Initialize the application
 function init() {
-	// Check banner dismiss state
 	checkBannerState();
-	
 	const controls = [
-		'textText',
-		'textSize',
-		'textColour',
-		'textFont',
-		'textTracking',
-		'textLineHeight',
-		'textWeight',
-		'textTransform',
-		'borderWidth',
-		'borderColour',
-		'borderRadius',
-		'backgroundStyle',
-		'backgroundColour',
-		'backgroundColour1',
-		'backgroundColour2',
-		'backgroundGradient',
-		'backgroundOverlay',
-		'overlay',
-		'textShadow',
-		'iconSize',
-		'iconPosition',
-		'iconColour',
-		'iconText',
-		'iconUrl',
-		'iconType',
-		'iconOpacity',
-		'iconRotation',
-		'iconFlip',
-		'iconShadow',
-		'badge',
-		'badgePosition'
+		'textText', 'textSize', 'textColour', 'textFont', 'textTracking', 'textLineHeight',
+		'textWeight', 'textTransform', 'borderWidth', 'borderColour', 'borderRadius',
+		'backgroundStyle', 'backgroundColour', 'backgroundColour1', 'backgroundColour2',
+		'backgroundGradient', 'backgroundOverlay', 'overlay', 'textShadow', 'iconSize',
+		'iconPosition', 'iconColour', 'iconText', 'iconUrl', 'iconType', 'iconOpacity',
+		'iconRotation', 'iconFlip', 'iconShadow', 'badge', 'badgePosition'
 	];
-	
-	// Set defaults if not present
-	if(!localStorage.getItem('iconMd')) {
-		localStorage.setItem('iconMd', 'radio_button_checked');
-	}
-	
-	// Restore saved values (use !== null to allow empty strings)
+	if(!localStorage.getItem('iconMd')) localStorage.setItem('iconMd', 'radio_button_checked');
 	controls.forEach(item => {
 		const el = document.getElementById(item + 'Control');
 		const saved = localStorage.getItem(item);
-		if(el && saved !== null) {
-			el.value = saved;
-		}
+		if(el && saved !== null) el.value = saved;
 	});
-	
-	// Generate the icon grid
 	generateIconGrid();
-	
-	// Initialize templates feature
 	initTemplates();
-	
-	// Apply all controls
-	controlTextText();
-	controlTextColour();
-	controlTextFont();
-	controlTextSize();
-	controlTextTracking();
-	controlTextLineHeight();
-	controlTextWeight();
-	controlTextTransform();
-	controlBorderWidth();
-	controlBorderColour();
-	controlBorderRadius();
-	controlBackgroundStyle();
-	controlOverlay();
-	controlTextShadow();
-	controlIconType();
-	controlIconEffects();
-	controlBadge();
-	
-	// Update range value displays
+	controlTextText(); controlTextColour(); controlTextFont(); controlTextSize();
+	controlTextTracking(); controlTextLineHeight(); controlTextWeight(); controlTextTransform();
+	controlBorderWidth(); controlBorderColour(); controlBorderRadius();
+	controlBackgroundStyle(); controlOverlay(); controlTextShadow();
+	controlIconType(); controlIconEffects(); controlBadge();
 	document.getElementById('trackingValue').textContent = document.getElementById('textTrackingControl').value + 'px';
 	document.getElementById('lineHeightValue').textContent = document.getElementById('textLineHeightControl').value;
 	document.getElementById('iconOpacityValue').textContent = Math.round(document.getElementById('iconOpacityControl').value * 100) + '%';
-	
-	// Initialize Choices.js dropdowns and store instances globally
 	window.choicesInstances = {};
-	
-	const defaultChoices = document.querySelectorAll('[default-choices]');
-	defaultChoices.forEach(currentValue => {
-		const instance = new Choices(currentValue, {
-			searchEnabled: false,
-			shouldSort: false,
-			allowHTML: true
-		});
-		if(currentValue.id) {
-			window.choicesInstances[currentValue.id] = instance;
-		}
+	document.querySelectorAll('[default-choices]').forEach(currentValue => {
+		const instance = new Choices(currentValue, { searchEnabled: false, shouldSort: false, allowHTML: true });
+		if(currentValue.id) window.choicesInstances[currentValue.id] = instance;
 	});
-	
-	const searchChoices = document.querySelectorAll('[search-choices]');
-	searchChoices.forEach(currentValue => {
-		const instance = new Choices(currentValue, {
-			searchEnabled: true,
-			allowHTML: true
-		});
-		if(currentValue.id) {
-			window.choicesInstances[currentValue.id] = instance;
-		}
+	document.querySelectorAll('[search-choices]').forEach(currentValue => {
+		const instance = new Choices(currentValue, { searchEnabled: true, allowHTML: true });
+		if(currentValue.id) window.choicesInstances[currentValue.id] = instance;
 	});
-	
-	// Font preview in dropdown
 	const fontControl = document.getElementById('textFontControl');
-	if(fontControl) {
-		fontControl.addEventListener('showDropdown', updateFontPreviews, false);
-		fontControl.addEventListener('search', updateFontPreviews, false);
-	}
-	
-	// Initialize tooltip system for elements with data-tooltip
+	if(fontControl) { fontControl.addEventListener('showDropdown', updateFontPreviews, false); fontControl.addEventListener('search', updateFontPreviews, false); }
 	initTooltipSystem();
-	
-	// Enable event tracking after a short delay to ensure Choices.js is fully initialized
-	// and any programmatic change events have fired
-	setTimeout(() => {
-		isInitializing = false;
-		console.log('Event tracking enabled');
-	}, 500);
-	
+	setTimeout(() => { isInitializing = false; console.log('Event tracking enabled'); }, 500);
 	console.log('Button Designer initialized');
 }
 
-// Tooltip system - creates tooltips appended to body to avoid overflow clipping
 let activeTooltip = null;
 
 function showTooltip(element, text) {
-	hideTooltip(); // Remove any existing tooltip
-	
+	hideTooltip();
 	const tooltip = document.createElement('div');
 	tooltip.className = 'global-tooltip';
 	tooltip.textContent = text;
 	document.body.appendChild(tooltip);
-	
 	const rect = element.getBoundingClientRect();
 	tooltip.style.left = (rect.left + rect.width / 2) + 'px';
 	tooltip.style.top = (rect.top - 8) + 'px';
-	
-	// Force reflow then show
 	tooltip.offsetHeight;
 	tooltip.classList.add('visible');
-	
 	activeTooltip = tooltip;
 	return tooltip;
 }
 
 function hideTooltip() {
-	if(activeTooltip) {
-		activeTooltip.remove();
-		activeTooltip = null;
-	}
+	if(activeTooltip) { activeTooltip.remove(); activeTooltip = null; }
 }
 
 function initTooltipSystem() {
-	// Handle hover tooltips for elements with data-tooltip attribute
-	document.addEventListener('mouseenter', (e) => {
-		const element = e.target.closest('[data-tooltip]');
-		if(element) {
-			showTooltip(element, element.dataset.tooltip);
-		}
-	}, true);
-	
-	document.addEventListener('mouseleave', (e) => {
-		const element = e.target.closest('[data-tooltip]');
-		if(element && !element.classList.contains('tooltip-locked')) {
-			hideTooltip();
-		}
-	}, true);
+	document.addEventListener('mouseenter', (e) => { const element = e.target.closest('[data-tooltip]'); if(element) showTooltip(element, element.dataset.tooltip); }, true);
+	document.addEventListener('mouseleave', (e) => { const element = e.target.closest('[data-tooltip]'); if(element && !element.classList.contains('tooltip-locked')) hideTooltip(); }, true);
 }
 
 function updateFontPreviews() {
 	const fontChoices = document.querySelectorAll('[id^=choices--textFontControl-item-choice]');
-	fontChoices.forEach(currentValue => {
-		currentValue.style.fontFamily = currentValue.getAttribute('data-value');
-	});
+	fontChoices.forEach(currentValue => { currentValue.style.fontFamily = currentValue.getAttribute('data-value'); });
 }
 
-// Get selected export size
+// ========================================
+// EXPORT SIZE - supports 144, 288 (square) and 200x100, 800x100 (rectangular)
+// ========================================
 function getExportSize() {
 	const exportSizeControl = document.getElementById('exportSizeControl');
 	const val = exportSizeControl?.value || '144';
@@ -2849,182 +1558,126 @@ function getExportSize() {
 	return { width: size, height: size };
 }
 
-// Download functionality - dynamic export size (144px default, 288px HD option)
+// ========================================
+// DOWNLOAD
+// ========================================
 document.getElementById("download").addEventListener("click", async function() {
 	const previewButton = document.getElementById('preview-button');
 	const filename = document.getElementById('textTextControl').value || 'button';
 	const exportSize = getExportSize();
-	
-	// Gather icon details for tracking
+
 	const iconType = document.getElementById('iconTypeControl')?.value || 'none';
 	const backgroundStyle = document.getElementById('backgroundStyleControl')?.value || 'solid';
 	const hasText = document.getElementById('textTextControl')?.value ? 'yes' : 'no';
 	const hasIcon = iconType !== 'none' ? 'yes' : 'no';
 	const materialIcon = iconType === 'md' ? (localStorage.getItem('iconMd') || 'none') : 'n/a';
-	
-	// Check if we should export as animated GIF based on current selections
+
 	const activeGif = getActiveAnimatedGif();
 	const format = activeGif ? 'GIF' : 'PNG';
-	
-	// Track download with comprehensive details
+
 	if (typeof _paq !== 'undefined') {
-		_paq.push(['trackEvent', 'Icon', 'Downloaded', `${format}|${exportSize}px|bg:${backgroundStyle}|text:${hasText}|icon:${hasIcon}|type:${iconType}|md:${materialIcon}`]);
+		_paq.push(['trackEvent', 'Icon', 'Downloaded', `${format}|${exportSize.width}x${exportSize.height}px|bg:${backgroundStyle}|text:${hasText}|icon:${hasIcon}|type:${iconType}|md:${materialIcon}`]);
 	}
-	
+
 	if(activeGif) {
 		await exportAnimatedGif(previewButton, filename, activeGif, exportSize);
 		return;
 	}
-	
-	// Use pixelRatio to scale up to selected size (size/244)
-	const pixelRatio = exportSize.width / 244;
-	
-	const exportSize = getExportSize();
-
-	// ...bestaande code voor activeGif check...
-	
-	const pixelRatioX = exportSize.width / 244;
-	const pixelRatioY = exportSize.height / 244;
 
 	try {
-	    // Voor niet-vierkante formaten: tijdelijk preview schalen
-	    const previewEl = document.getElementById('preview-button');
-	    const originalWidth = previewEl.style.width;
-	    const originalHeight = previewEl.style.height;
-	
-	    if (exportSize.width !== exportSize.height) {
-	        previewEl.style.width = exportSize.width + 'px';
-	        previewEl.style.height = exportSize.height + 'px';
-	    }
-	
-	    const dataUrl = await htmlToImage.toPng(previewEl, {
-	        quality: 1,
-	        width: exportSize.width,
-	        height: exportSize.height,
-	        pixelRatio: 1
-	    });
-	
-	    // Herstel originele afmetingen
-	    previewEl.style.width = originalWidth;
-	    previewEl.style.height = originalHeight;
-	
-	    const link = document.createElement('a');
-	    link.download = `${filename}.png`;
-	    link.href = dataUrl;
-	    link.click();
+		const previewEl = document.getElementById('preview-button');
+		const originalWidth = previewEl.style.width;
+		const originalHeight = previewEl.style.height;
+
+		if (exportSize.width !== exportSize.height) {
+			previewEl.style.width = exportSize.width + 'px';
+			previewEl.style.height = exportSize.height + 'px';
+		}
+
+		const dataUrl = await htmlToImage.toPng(previewEl, {
+			quality: 1,
+			width: exportSize.width,
+			height: exportSize.height,
+			pixelRatio: 1
+		});
+
+		previewEl.style.width = originalWidth;
+		previewEl.style.height = originalHeight;
+
+		const link = document.createElement('a');
+		link.download = `${filename}.png`;
+		link.href = dataUrl;
+		link.click();
 	} catch(error) {
-	    console.error('Export error:', error);
-	    alert('Er was een fout bij het exporteren. Probeer opnieuw.');
+		console.error('Export error:', error);
+		alert('Er was een fout bij het exporteren. Probeer opnieuw.');
 	}
 });
 
-// Export animated GIF with button composition
+// ========================================
+// ANIMATED GIF EXPORT
+// ========================================
 async function exportAnimatedGif(previewButton, filename, activeGif, exportSize) {
 	const buttonBackground = document.getElementById('buttonBackground');
 	const buttonIconInner = document.getElementById('buttonIconInner');
 	const originalBgImage = buttonBackground.style.backgroundImage;
 	const originalIconHtml = buttonIconInner.innerHTML;
-	
 	const gifSource = activeGif.source;
 	const gifData = activeGif.gif.data;
-	
-	// Show loading state
 	const downloadBtn = document.getElementById('download');
 	const originalBtnText = downloadBtn.innerHTML;
 	downloadBtn.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span> Processing...';
 	downloadBtn.disabled = true;
-	
 	try {
 		console.log('Starting GIF export...', 'source:', gifSource);
-		console.log('gifData exists:', !!gifData);
-		
-		// Parse GIF frames using a canvas-based approach
 		const frames = await extractGifFrames(gifData);
 		console.log('Extracted frames:', frames.length);
-		
-		if(frames.length === 0) {
-			throw new Error('Could not extract frames from GIF');
-		}
-		
-		// Create GIF encoder
+		if(frames.length === 0) throw new Error('Could not extract frames from GIF');
 		const gif = new GIF({
 			workers: 2,
 			quality: 10,
-			width: exportSize,
-			height: exportSize,
+			width: exportSize.width,
+			height: exportSize.height,
 			workerScript: '/js/gif.worker.js'
 		});
-		
-		const pixelRatio = exportSize / 244;
-		
-		// Process each frame
+		const pixelRatio = exportSize.width / 244;
 		for(let i = 0; i < frames.length; i++) {
 			const frame = frames[i];
-			console.log(`Processing frame ${i + 1}/${frames.length}`);
-			
-			// Apply frame to the correct element based on source
-			if(gifSource === 'background') {
-				buttonBackground.style.backgroundImage = `url(${frame.dataUrl})`;
-			} else {
-				// Icon source - update the icon image
-				buttonIconInner.innerHTML = `<img src="${frame.dataUrl}">`;
-			}
-			
-			// Wait a tick for the DOM to update
+			if(gifSource === 'background') buttonBackground.style.backgroundImage = `url(${frame.dataUrl})`;
+			else buttonIconInner.innerHTML = `<img src="${frame.dataUrl}">`;
 			await new Promise(resolve => setTimeout(resolve, 50));
-			
-			// Render the button with this frame
-			const canvas = await htmlToImage.toCanvas(previewButton, {
-				pixelRatio: pixelRatio
-			});
-			
-			// Add frame to GIF
+			const canvas = await htmlToImage.toCanvas(previewButton, { pixelRatio: pixelRatio });
 			gif.addFrame(canvas, { delay: frame.delay, copy: true });
 		}
-		
-		console.log('All frames processed, rendering GIF...');
-		
-		// Restore original state
 		buttonBackground.style.backgroundImage = originalBgImage;
 		buttonIconInner.innerHTML = originalIconHtml;
-		
-		// Render the GIF
 		gif.on('finished', function(blob) {
-			console.log('GIF finished rendering, size:', blob.size);
 			const url = URL.createObjectURL(blob);
 			const link = document.createElement('a');
 			link.download = `${filename}.gif`;
 			link.href = url;
 			link.click();
 			URL.revokeObjectURL(url);
-			
-			// Restore button state
 			downloadBtn.innerHTML = originalBtnText;
 			downloadBtn.disabled = false;
 		});
-		
 		gif.on('progress', function(p) {
 			downloadBtn.innerHTML = `<span class="material-symbols-outlined">hourglass_empty</span> ${Math.round(p * 100)}%`;
 		});
-		
 		gif.render();
-		
 	} catch(error) {
 		console.error('GIF export error:', error);
-		console.error('Error stack:', error.stack);
 		alert('There was an error exporting the animated GIF. Falling back to PNG export.');
-		
-		// Restore original state
 		buttonBackground.style.backgroundImage = originalBgImage;
 		buttonIconInner.innerHTML = originalIconHtml;
 		downloadBtn.innerHTML = originalBtnText;
 		downloadBtn.disabled = false;
-		
 		// Fallback to PNG
-		const fallbackPixelRatio = exportSize / 244;
 		const dataUrl = await htmlToImage.toPng(previewButton, {
 			quality: 1,
-			pixelRatio: fallbackPixelRatio
+			width: exportSize.width,
+			height: exportSize.height,
+			pixelRatio: 1
 		});
 		const link = document.createElement('a');
 		link.download = `${filename}.png`;
@@ -3033,86 +1686,40 @@ async function exportAnimatedGif(previewButton, filename, activeGif, exportSize)
 	}
 }
 
-// Extract frames from an animated GIF using omggif
 async function extractGifFrames(gifDataUrl) {
 	try {
-		// Convert data URL to array buffer
 		const response = await fetch(gifDataUrl);
 		const buffer = await response.arrayBuffer();
 		const uint8 = new Uint8Array(buffer);
-		
-		// Parse GIF using omggif
 		const gif = new GifReader(uint8);
 		const numFrames = gif.numFrames();
-		
 		console.log('omggif parsed frames:', numFrames);
-		
-		if(numFrames === 0) {
-			throw new Error('No frames found');
-		}
-		
+		if(numFrames === 0) throw new Error('No frames found');
 		const gifWidth = gif.width;
 		const gifHeight = gif.height;
-		
-		// Create a master canvas for compositing frames
 		const masterCanvas = document.createElement('canvas');
 		masterCanvas.width = gifWidth;
 		masterCanvas.height = gifHeight;
 		const masterCtx = masterCanvas.getContext('2d');
-		
-		// Create a frame canvas
 		const frameCanvas = document.createElement('canvas');
 		frameCanvas.width = gifWidth;
 		frameCanvas.height = gifHeight;
 		const frameCtx = frameCanvas.getContext('2d');
-		
 		const extractedFrames = [];
-		
 		for(let i = 0; i < numFrames; i++) {
 			const frameInfo = gif.frameInfo(i);
-			
-			// Create pixel buffer for this frame
 			const framePixels = new Uint8Array(gifWidth * gifHeight * 4);
-			
-			// Decode frame into pixel buffer
 			gif.decodeAndBlitFrameRGBA(i, framePixels);
-			
-			// Create ImageData from the frame pixels
-			const imageData = new ImageData(
-				new Uint8ClampedArray(framePixels),
-				gifWidth,
-				gifHeight
-			);
-			
-			// Put frame on frame canvas
+			const imageData = new ImageData(new Uint8ClampedArray(framePixels), gifWidth, gifHeight);
 			frameCtx.putImageData(imageData, 0, 0);
-			
-			// Draw frame onto master canvas
 			masterCtx.drawImage(frameCanvas, 0, 0);
-			
-			// Save composited frame
-			extractedFrames.push({
-				dataUrl: masterCanvas.toDataURL('image/png'),
-				delay: frameInfo.delay * 10 || 100 // delay is in centiseconds, convert to ms
-			});
-			
-			// Handle disposal
-			if(frameInfo.disposal === 2) {
-				// Restore to background
-				masterCtx.clearRect(frameInfo.x, frameInfo.y, frameInfo.width, frameInfo.height);
-			} else if(frameInfo.disposal === 3) {
-				// Restore to previous - we'd need to save previous state
-				// For now just clear
-				masterCtx.clearRect(frameInfo.x, frameInfo.y, frameInfo.width, frameInfo.height);
-			}
+			extractedFrames.push({ dataUrl: masterCanvas.toDataURL('image/png'), delay: frameInfo.delay * 10 || 100 });
+			if(frameInfo.disposal === 2) masterCtx.clearRect(frameInfo.x, frameInfo.y, frameInfo.width, frameInfo.height);
+			else if(frameInfo.disposal === 3) masterCtx.clearRect(frameInfo.x, frameInfo.y, frameInfo.width, frameInfo.height);
 		}
-		
 		return extractedFrames;
-		
 	} catch(e) {
 		console.error('Error extracting GIF frames:', e);
-		
-		// Fallback: just use the static image
 		return new Promise((resolve) => {
 			const img = new Image();
 			img.onload = function() {
